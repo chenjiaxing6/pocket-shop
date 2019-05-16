@@ -49,7 +49,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping(value = "login",method = RequestMethod.POST)
-   public String login(@RequestParam(required = true) String email, @RequestParam(required = true)String password,String isRemeber,
+   public String login(@RequestParam(required = true) String email, @RequestParam(required = true)String password,String isRemember,
                        HttpServletRequest request, HttpServletResponse response, Model model){
 
         TbUser tbUser = tbUserService.login(email, password);
@@ -61,7 +61,7 @@ public class LoginController {
         //登陆成功
         else {
             request.getSession().setAttribute(ConstantUtils.SESSION_USER,tbUser);
-            if (isRemeber!= null) {
+            if (isRemember!= null) {
                 //如果勾选了记住我   就把用户名密码放入session
                 CookieUtils.setCookie(request, response, "userInfo", String.format("%s:%s", email, password), 7 * 24 * 60 * 60);
             }else {
