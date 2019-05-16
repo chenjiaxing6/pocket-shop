@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.DigestUtils;
 
 import java.util.List;
 
@@ -26,5 +27,12 @@ public class TbUserServiceTest {
         for (TbUser tbUser : tbUsers) {
             System.out.println(tbUser.getUsername());
         }
+    }
+
+    @Test
+    public void testMd5(){
+        String password = "123456";
+        String s = DigestUtils.md5DigestAsHex(password.getBytes());
+        System.out.println(s);
     }
 }

@@ -2,11 +2,12 @@ package cn.ishangit.shop.web.admin.web.controller;
 
 import cn.ishangit.shop.commons.constant.ConstantUtils;
 import cn.ishangit.shop.commons.constant.CookieUtils;
-import cn.ishangit.shop.domain.User;
-import cn.ishangit.shop.web.admin.service.UserService;
+import cn.ishangit.shop.domain.TbUser;
+import cn.ishangit.shop.web.admin.service.TbUserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginController {
 
     @Autowired
-    private UserService userService;
+    private TbUserService tbUserService;
 
     /**
      * 跳转到登录页面
@@ -48,17 +49,29 @@ public class LoginController {
      * @return
      */
     @RequestMapping(value = "login",method = RequestMethod.POST)
-   public String login(@RequestParam(required = true) String email, @RequestParam(required = true)String password,
-                       HttpServletRequest request, HttpServletResponse response){
-        User user = userService.login(email,password);
+   public String login(@RequestParam(required = true) String email, @RequestParam(required = true)String password,String isRemeber,
+                       HttpServletRequest request, HttpServletResponse response, Model model){
 
-        if (user == null){
-            return "/login";
-        }else {
-            request.getSession().setAttribute(ConstantUtils.SESSION_USER,user);
-            CookieUtils.setCookie(request,response,"userInfo",String.format("%s:%s",email,password),7*24*60*60);
+        TbUser tbUser = tbUserService.login(email, password);
+        //登陆失败
+        if (tbUser == null){
+            model.addAttribute("message","用户名或密码错误，请重新输入！");
+            return login(request);
         }
-        return "redirect:/main";
+        //登陆成功
+        else {
+            request.getSession().setAttribute(ConstantUtils.SESSION_USER,tbUser);
+            if (isRemeber!= null) {
+                //如果勾选了记住我   就把用户名密码放入session
+                CookieUtils.setCookie(request, response, "userInfo", String.format("%s:%s", email, password), 7 * 24 * 60 * 60);
+            }else {
+                //如果没有勾选，判断cookie中有没有用户名密码信息，有就删除
+                if (!StringUtils.isBlank(CookieUtils.getCookieValue(request,"userInfo"))) {
+                    CookieUtils.deleteCookie(request, response, "userInfo");
+                }
+            }
+            return "redirect:/main";
+        }
    }
 
     /**
@@ -67,7 +80,7 @@ public class LoginController {
      */
    @RequestMapping(value = "logout",method = RequestMethod.GET)
    public String logout(HttpServletRequest request){
-        request.getSession().invalidate();;
-        return "/login";
+        request.getSession().invalidate();
+        return "redirect:login";
    }
 }

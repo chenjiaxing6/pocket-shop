@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.ishangit.shop.web.admin.dao.TbUserDao">
+    <sql id="tbUserColumns">
+        tb_user.id,
+        tb_user.username,
+        tb_user.`password`,
+        tb_user.phone,
+        tb_user.email,
+        tb_user.created,
+        tb_user.updated
+    </sql>
     <select id="selectAll" resultType="TbUser">
         SELECT
             a.id,
@@ -12,5 +21,11 @@
             a.updated
         FROM
             tb_user AS a
+    </select>
+
+    <select id="getByEmail" resultType="TbUser">
+        select
+        <include refid="tbUserColumns"/>
+        from  tb_user where email = #{email}
     </select>
 </mapper>

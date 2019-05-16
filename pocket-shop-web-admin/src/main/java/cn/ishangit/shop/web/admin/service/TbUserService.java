@@ -14,4 +14,9 @@ public interface TbUserService {
      * @return
      */
     public List<TbUser> selectAll();
+
+    /**
+     * 登录
+     */
+    public TbUser login(String email,String password);
 }
