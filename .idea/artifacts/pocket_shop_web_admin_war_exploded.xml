@@ -34,9 +34,14 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.17.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.17.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.17.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:4.3.17.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.6" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.46" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.8" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.3.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.17.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.17.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">

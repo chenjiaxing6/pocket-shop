@@ -17,6 +17,7 @@
     <description></description>
 
     <dependencies>
+        <!--project begin-->
         <dependency>
             <groupId>cn.ishangit</groupId>
             <artifactId>pocket-shop-domain</artifactId>
@@ -27,7 +28,9 @@
             <artifactId>pocket-shop-commons</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <!--project end-->
 
+        <!--Spring Begin-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -36,6 +39,19 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <!--Spring End-->
+
+        <!--junit begin-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--junit end-->
 
         <!-- Servlet Begin -->
         <dependency>
@@ -48,7 +64,8 @@
             <artifactId>jstl</artifactId>
         </dependency>
         <!-- Servlet End -->
-        <!--druid Begin-->
+
+        <!--database Begin-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
@@ -57,7 +74,19 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!--druid End-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+        <!--database End-->
     </dependencies>
 
 </project>
