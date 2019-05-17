@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>口袋商城后台管理| 主页</title>
@@ -40,31 +41,69 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-xs-12">
+                    <div class="alert alert-${baseResult.status == 200?"success":"danger"} alert-dismissible" ${baseResult.message == null ? "style='display:none;'" : ""}>
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        ${baseResult.message}
+                    </div>
+                </div>
+                <div class="col-xs-12">
                     <div class="box">
                         <div class="box-header">
                             <h3 class="box-title">用户列表</h3>
 
                             <div class="row" style="padding-left: 15px;padding-top: 13px;">
-                                <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-plus"></i> 新增</a>&nbsp;&nbsp;&nbsp;
-                                <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i> 批量删除</a>&nbsp;&nbsp;&nbsp;
-                                <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-cloud-upload"></i> 导入</a>&nbsp;&nbsp;&nbsp;
-                                <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-cloud-download"></i> 导出</a>
+                                <a href="/user/form" type="button" class="btn btn-default btn-sm"><i
+                                        class="fa fa-plus"></i> 新增</a>&nbsp;&nbsp;&nbsp;
+                                <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i>
+                                    批量删除</a>&nbsp;&nbsp;&nbsp;
+                                <a href="#" type="button" class="btn btn-default btn-sm"><i
+                                        class="fa fa-cloud-upload"></i> 导入</a>&nbsp;&nbsp;&nbsp;
+                                <a href="#" type="button" class="btn btn-default btn-sm"><i
+                                        class="fa fa-cloud-download"></i> 导出</a>
                             </div>
 
-                            <div class="box-tools">
-                                <div class="input-group input-group-sm" style="width: 150px;">
-                                    <input type="text" name="table_search" class="form-control pull-right" placeholder="搜索">
-
-                                    <div class="input-group-btn">
-                                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                            <br/>
+                            <div class="row" style="padding-left: 5px">
+                                <form:form cssClass="form-horizontal" action="/user/search" method="post"
+                                           modelAttribute="tbUser">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <div class="form-group">
+                                                <label for="email" class="col-sm-3 control-label">邮箱</label>
+                                                <div class="col-sm-8">
+                                                    <form:input path="email" cssClass="form-control" placeholder="邮箱"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <div class="form-group">
+                                                <label for="username" class="col-sm-3 control-label">姓名</label>
+                                                <div class="col-sm-8">
+                                                    <form:input path="username" cssClass="form-control" placeholder="姓名"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <div class="form-group">
+                                                <label for="phone" class="col-sm-3 control-label">手机</label>
+                                                <div class="col-sm-8">
+                                                    <form:input path="phone" cssClass="form-control" placeholder="手机"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <button type="submit" class="btn btn-info">搜索</button>
+                                        </div>
                                     </div>
-                                </div>
+                                </form:form>
                             </div>
+
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body table-responsive no-padding">
                             <table class="table table-hover">
                                 <tr>
+                                    <th><input type="checkbox" class="minimal icheck_master"/></th>
                                     <th>ID</th>
                                     <th>用户名</th>
                                     <th>手机</th>
@@ -74,15 +113,19 @@
                                 </tr>
                                 <c:forEach items="${tbUsers}" var="user">
                                     <tr>
+                                        <th><input type="checkbox" id="${user.id}" class="minimal"/></th>
                                         <td>${user.id}</td>
                                         <td>${user.username}</td>
                                         <td>${user.phone}</td>
                                         <td>${user.email}</td>
-                                        <td><fmt:formatDate value="${user.updated}" pattern="yyyy-MM-dd HH:mm:ss"/> </td>
+                                        <td><fmt:formatDate value="${user.updated}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
                                         <td>
-                                            <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-search"></i> 查看</a>
-                                            <a href="#" type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> 编辑</a>
-                                            <a href="#" type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> 删除</a>
+                                            <a href="#" type="button" class="btn btn-default btn-sm"><i
+                                                    class="fa fa-search"></i> 查看</a>
+                                            <a href="#" type="button" class="btn btn-primary btn-sm"><i
+                                                    class="fa fa-edit"></i> 编辑</a>
+                                            <a href="#" type="button" class="btn btn-danger btn-sm"><i
+                                                    class="fa fa-trash"></i> 删除</a>
                                         </td>
                                     </tr>
                                 </c:forEach>

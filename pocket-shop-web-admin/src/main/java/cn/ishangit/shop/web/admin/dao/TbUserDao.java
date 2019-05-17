@@ -23,4 +23,29 @@ public interface TbUserDao {
      * @return
      */
     public TbUser getByEmail(String email);
+
+    /**
+     * 插入用户
+     * @param tbUser
+     */
+    public void insertTbUser(TbUser tbUser);
+
+    /**
+     * 删除用户
+     * @param tbUser
+     */
+    public void updateTbUser(TbUser tbUser);
+
+    /**
+     * 根据id查询用户
+     * @param id
+     * @return
+     */
+    public TbUser getById(Integer id);
+
+    /**
+     * 搜索
+     * @return
+     */
+    public List<TbUser> search(TbUser tbUser);
 }
