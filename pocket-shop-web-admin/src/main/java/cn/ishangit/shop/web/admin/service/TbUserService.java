@@ -35,4 +35,10 @@ public interface TbUserService {
      * 搜索
      */
     public List<TbUser> search(TbUser tbUser);
+
+    /**
+     * 批量删除
+     * @param ids
+     */
+    public void  deleteMulti(String[] ids);
 }

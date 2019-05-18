@@ -48,4 +48,10 @@ public interface TbUserDao {
      * @return
      */
     public List<TbUser> search(TbUser tbUser);
+
+    /**
+     * 批量删除
+     * @param ids
+     */
+    public void deleteMulti(String[] ids);
 }

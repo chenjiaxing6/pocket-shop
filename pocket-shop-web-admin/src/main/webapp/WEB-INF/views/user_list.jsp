@@ -9,6 +9,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="sys" tagdir="/WEB-INF/tags/sys" %>
 <html>
 <head>
     <title>口袋商城后台管理| 主页</title>
@@ -54,16 +55,18 @@
                             <div class="row" style="padding-left: 15px;padding-top: 13px;">
                                 <a href="/user/form" type="button" class="btn btn-default btn-sm"><i
                                         class="fa fa-plus"></i> 新增</a>&nbsp;&nbsp;&nbsp;
-                                <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i>
-                                    批量删除</a>&nbsp;&nbsp;&nbsp;
+                                <button href="#" type="button" class="btn btn-default btn-sm deleteAll" onclick="App.deleteMulti('/user/delete')"><i class="fa fa-trash"></i>
+                                    批量删除</button>&nbsp;&nbsp;&nbsp;
                                 <a href="#" type="button" class="btn btn-default btn-sm"><i
                                         class="fa fa-cloud-upload"></i> 导入</a>&nbsp;&nbsp;&nbsp;
                                 <a href="#" type="button" class="btn btn-default btn-sm"><i
-                                        class="fa fa-cloud-download"></i> 导出</a>
+                                        class="fa fa-cloud-download"></i> 导出</a>&nbsp;&nbsp;&nbsp;
+                                <button class="btn btn-primary btn-sm" onclick="$('.search-panle').css('display')=='none'?$('.search-panle').show():$('.search-panle').hide()"><i
+                                        class="fa fa-search"></i> 搜索</button>
                             </div>
 
                             <br/>
-                            <div class="row" style="padding-left: 5px">
+                            <div class="row search-panle" style="padding-left: 5px;display: none">
                                 <form:form cssClass="form-horizontal" action="/user/search" method="post"
                                            modelAttribute="tbUser">
                                     <div class="row">
@@ -71,7 +74,7 @@
                                             <div class="form-group">
                                                 <label for="email" class="col-sm-3 control-label">邮箱</label>
                                                 <div class="col-sm-8">
-                                                    <form:input path="email" cssClass="form-control" placeholder="邮箱"/>
+                                                    <form:input path="email" cssClass="form-control " placeholder="邮箱"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -148,5 +151,7 @@
     <!-- 版权信息结束 -->
     <jsp:include page="../includs/footer.jsp"/>
 </div>
+<!--自定义模态框-->
+<sys:model></sys:model>
 </body>
 </html>
