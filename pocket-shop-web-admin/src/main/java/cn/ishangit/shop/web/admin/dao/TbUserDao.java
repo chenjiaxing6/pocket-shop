@@ -4,6 +4,7 @@ import cn.ishangit.shop.domain.TbUser;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Chen
@@ -54,4 +55,18 @@ public interface TbUserDao {
      * @param ids
      */
     public void deleteMulti(String[] ids);
+
+
+    /**
+     * 分页查询
+     * @param param：需要传入start：数据开始的位置 length：每页的记录数
+     * @return
+     */
+    public List<TbUser> page(Map<String,Object> param);
+
+    /**
+     * 查询总记录数
+     * @return
+     */
+    public Integer count();
 }

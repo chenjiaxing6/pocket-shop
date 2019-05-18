@@ -16,5 +16,13 @@
     <name>pocket-shop-domain</name>
     <description></description>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>cn.ishangit</groupId>
+            <artifactId>pocket-shop-commons</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

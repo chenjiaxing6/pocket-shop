@@ -1,6 +1,7 @@
 package cn.ishangit.shop.web.admin.web.controller;
 
 import cn.ishangit.shop.commons.dto.BaseResult;
+import cn.ishangit.shop.commons.dto.PageInfo;
 import cn.ishangit.shop.domain.TbUser;
 import cn.ishangit.shop.web.admin.service.TbUserService;
 import org.apache.commons.lang3.StringUtils;
@@ -13,7 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Chen
@@ -102,5 +106,22 @@ public class TbUserController {
             baseResult = BaseResult.fail("删除失败！");
             return baseResult;
         }
+    }
+
+    @RequestMapping(value = "page",method = RequestMethod.GET)
+    @ResponseBody
+    public PageInfo<TbUser> page(HttpServletRequest request){
+        Map<String, Object> res = new HashMap<>();
+
+        String str_draw = request.getParameter("draw");
+        String str_start = request.getParameter("start");
+        String str_length = request.getParameter("length");
+
+        int draw = str_draw  == null?0: Integer.parseInt(str_draw);
+        int start = str_start  == null?0: Integer.parseInt(str_start);
+        int length = str_length  == null?10: Integer.parseInt(str_length);
+        PageInfo<TbUser> pageInfo = userService.page(length, start,draw);
+
+        return pageInfo;
     }
 }

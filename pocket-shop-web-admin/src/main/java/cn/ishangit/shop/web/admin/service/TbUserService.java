@@ -1,6 +1,7 @@
 package cn.ishangit.shop.web.admin.service;
 
 import cn.ishangit.shop.commons.dto.BaseResult;
+import cn.ishangit.shop.commons.dto.PageInfo;
 import cn.ishangit.shop.domain.TbUser;
 
 import java.util.List;
@@ -41,4 +42,18 @@ public interface TbUserService {
      * @param ids
      */
     public void  deleteMulti(String[] ids);
+
+    /**
+     * 分页查询
+     * @param length
+     * @param start
+     * @return
+     */
+    public PageInfo<TbUser> page(Integer length, Integer start,Integer draw);
+
+    /**
+     * 查询总记录数
+     * @return
+     */
+    public Integer count();
 }

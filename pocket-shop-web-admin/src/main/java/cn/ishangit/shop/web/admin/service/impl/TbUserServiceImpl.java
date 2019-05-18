@@ -2,6 +2,7 @@ package cn.ishangit.shop.web.admin.service.impl;
 
 import cn.ishangit.shop.commons.constant.RegexUtils;
 import cn.ishangit.shop.commons.dto.BaseResult;
+import cn.ishangit.shop.commons.dto.PageInfo;
 import cn.ishangit.shop.domain.TbUser;
 import cn.ishangit.shop.web.admin.dao.TbUserDao;
 import cn.ishangit.shop.web.admin.service.TbUserService;
@@ -11,7 +12,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Chen
@@ -77,6 +80,27 @@ public class TbUserServiceImpl implements TbUserService {
     @Override
     public void deleteMulti(String[] ids) {
         tbUserDao.deleteMulti(ids);
+    }
+
+    @Override
+    public PageInfo<TbUser> page(Integer length, Integer start,Integer draw) {
+        PageInfo<TbUser> pageInfo = new PageInfo();
+
+        Map<String,Object> param = new HashMap<>();
+        param.put("length",length);
+        param.put("start",start);
+
+        pageInfo.setDraw(draw);
+        pageInfo.setData(tbUserDao.page(param));
+        pageInfo.setRecordsTotal(tbUserDao.count());
+        pageInfo.setRecordsFiltered(tbUserDao.count());
+
+        return pageInfo;
+    }
+
+    @Override
+    public Integer count() {
+        return tbUserDao.count();
     }
 
     /**

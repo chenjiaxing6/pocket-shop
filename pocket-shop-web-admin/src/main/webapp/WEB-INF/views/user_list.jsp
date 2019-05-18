@@ -55,17 +55,21 @@
                             <div class="row" style="padding-left: 15px;padding-top: 13px;">
                                 <a href="/user/form" type="button" class="btn btn-default btn-sm"><i
                                         class="fa fa-plus"></i> 新增</a>&nbsp;&nbsp;&nbsp;
-                                <button href="#" type="button" class="btn btn-default btn-sm deleteAll" onclick="App.deleteMulti('/user/delete')"><i class="fa fa-trash"></i>
-                                    批量删除</button>&nbsp;&nbsp;&nbsp;
+                                <button href="#" type="button" class="btn btn-default btn-sm deleteAll"
+                                        onclick="App.deleteMulti('/user/delete')"><i class="fa fa-trash"></i>
+                                    批量删除
+                                </button>&nbsp;&nbsp;&nbsp;
                                 <a href="#" type="button" class="btn btn-default btn-sm"><i
                                         class="fa fa-cloud-upload"></i> 导入</a>&nbsp;&nbsp;&nbsp;
                                 <a href="#" type="button" class="btn btn-default btn-sm"><i
                                         class="fa fa-cloud-download"></i> 导出</a>&nbsp;&nbsp;&nbsp;
-                                <button class="btn btn-primary btn-sm" onclick="$('.search-panle').css('display')=='none'?$('.search-panle').show():$('.search-panle').hide()"><i
-                                        class="fa fa-search"></i> 搜索</button>
+                                <button class="btn btn-primary btn-sm"
+                                        onclick="$('.search-panle').css('display')=='none'?$('.search-panle').show():$('.search-panle').hide()">
+                                    <i
+                                            class="fa fa-search"></i> 搜索
+                                </button>
                             </div>
 
-                            <br/>
                             <div class="row search-panle" style="padding-left: 5px;display: none">
                                 <form:form cssClass="form-horizontal" action="/user/search" method="post"
                                            modelAttribute="tbUser">
@@ -82,7 +86,8 @@
                                             <div class="form-group">
                                                 <label for="username" class="col-sm-3 control-label">姓名</label>
                                                 <div class="col-sm-8">
-                                                    <form:input path="username" cssClass="form-control" placeholder="姓名"/>
+                                                    <form:input path="username" cssClass="form-control"
+                                                                placeholder="姓名"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -104,7 +109,8 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body table-responsive no-padding">
-                            <table class="table table-hover">
+                            <table class="table table-hover" id="dataTable">
+                                <thead>
                                 <tr>
                                     <th><input type="checkbox" class="minimal icheck_master"/></th>
                                     <th>ID</th>
@@ -114,24 +120,10 @@
                                     <th>更新时间</th>
                                     <th>操作</th>
                                 </tr>
-                                <c:forEach items="${tbUsers}" var="user">
-                                    <tr>
-                                        <th><input type="checkbox" id="${user.id}" class="minimal"/></th>
-                                        <td>${user.id}</td>
-                                        <td>${user.username}</td>
-                                        <td>${user.phone}</td>
-                                        <td>${user.email}</td>
-                                        <td><fmt:formatDate value="${user.updated}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
-                                        <td>
-                                            <a href="#" type="button" class="btn btn-default btn-sm"><i
-                                                    class="fa fa-search"></i> 查看</a>
-                                            <a href="#" type="button" class="btn btn-primary btn-sm"><i
-                                                    class="fa fa-edit"></i> 编辑</a>
-                                            <a href="#" type="button" class="btn btn-danger btn-sm"><i
-                                                    class="fa fa-trash"></i> 删除</a>
-                                        </td>
-                                    </tr>
-                                </c:forEach>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
                             </table>
                         </div>
                         <!-- /.box-body -->
@@ -153,5 +145,33 @@
 </div>
 <!--自定义模态框-->
 <sys:model></sys:model>
+<script>
+    $(function () {
+        var columns = [
+            {
+                "data": function (row, type, val, meta) {
+                    return '<input type="checkbox" id="'+row.id+'" class="minimal"/>';
+                }
+            },
+            {"data": "id"},
+            {"data": "username"},
+            {"data": "phone"},
+            {"data": "email"},
+            {"data": "updated"},
+            {
+                "data": function (row, type, val, meta) {
+                    return '<a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i> 查看</a>' +
+                        '<a href="#" type="button" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> 编辑</a>' +
+                        '<a href="#" type="button" class="btn btn-danger btn-sm"><i class="fa fa-edit"></i> 删除</a>';
+                }
+            }
+        ];
+
+        App.initDataTables("/user/page", columns);
+
+    })
+
+
+</script>
 </body>
 </html>

@@ -66,6 +66,17 @@
         </where>
     </select>
 
+    <select id="page" resultType="TbUser" parameterType="java.util.Map">
+        select <include refid="tbUserColumns"/>
+        FROM
+        tb_user
+        limit #{start},#{length}
+    </select>
+
+    <select id="count" resultType="java.lang.Integer">
+      select count(*) from tb_user;
+    </select>
+
     <delete id="deleteMulti">
         delete from tb_user
         where id in
