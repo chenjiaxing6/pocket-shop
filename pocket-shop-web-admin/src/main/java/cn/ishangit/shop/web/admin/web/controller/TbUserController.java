@@ -110,7 +110,7 @@ public class TbUserController {
 
     @RequestMapping(value = "page",method = RequestMethod.GET)
     @ResponseBody
-    public PageInfo<TbUser> page(HttpServletRequest request){
+    public PageInfo<TbUser> page(HttpServletRequest request,TbUser tbUser){
         Map<String, Object> res = new HashMap<>();
 
         String str_draw = request.getParameter("draw");
@@ -120,8 +120,18 @@ public class TbUserController {
         int draw = str_draw  == null?0: Integer.parseInt(str_draw);
         int start = str_start  == null?0: Integer.parseInt(str_start);
         int length = str_length  == null?10: Integer.parseInt(str_length);
-        PageInfo<TbUser> pageInfo = userService.page(length, start,draw);
+        PageInfo<TbUser> pageInfo = userService.page(length, start,draw,tbUser);
 
         return pageInfo;
+    }
+
+    /**
+     * 用户详情
+     * @param tbUser
+     * @return
+     */
+    @RequestMapping(value = "detail",method = RequestMethod.GET)
+    public String detail(TbUser tbUser){
+        return "user_detail";
     }
 }

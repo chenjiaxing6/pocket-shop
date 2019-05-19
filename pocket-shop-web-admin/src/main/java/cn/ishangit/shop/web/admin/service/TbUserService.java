@@ -49,11 +49,11 @@ public interface TbUserService {
      * @param start
      * @return
      */
-    public PageInfo<TbUser> page(Integer length, Integer start,Integer draw);
+    public PageInfo<TbUser> page(Integer length, Integer start,Integer draw,TbUser tbUser);
 
     /**
      * 查询总记录数
      * @return
      */
-    public Integer count();
+    public Integer count(TbUser tbUser);
 }

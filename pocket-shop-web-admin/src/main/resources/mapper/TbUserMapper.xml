@@ -70,11 +70,21 @@
         select <include refid="tbUserColumns"/>
         FROM
         tb_user
+          <where>
+              <if test="tbUser.username !='' and tbUser.username != null" >
+                  username like concat('%',#{tbUser.username},'%')
+              </if>
+          </where>
         limit #{start},#{length}
     </select>
 
     <select id="count" resultType="java.lang.Integer">
-      select count(*) from tb_user;
+      select count(*) from tb_user
+        <where>
+            <if test="username !='' and username != null" >
+                username like concat('%',#{username},'%')
+            </if>
+        </where>
     </select>
 
     <delete id="deleteMulti">
@@ -83,6 +93,5 @@
         <foreach collection="array" open="(" close=")" separator="," item="id">
             #{id}
         </foreach>
-
     </delete>
 </mapper>

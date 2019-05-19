@@ -1,6 +1,7 @@
 package cn.ishangit.shop.domain;
 
 import cn.ishangit.shop.commons.persistence.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * @author Chen
@@ -22,6 +23,7 @@ public class TbUser extends BaseEntity {
         this.username = username;
     }
 
+    @JsonIgnore
     public String getPassword() {
         return password;
     }

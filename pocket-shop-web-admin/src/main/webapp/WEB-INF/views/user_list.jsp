@@ -160,8 +160,8 @@
             {"data": "updated"},
             {
                 "data": function (row, type, val, meta) {
-                    return '<a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i> 查看</a>' +
-                        '<a href="#" type="button" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> 编辑</a>' +
+                    return '<button  onclick="showDetail('+row.id+')" type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i> 查看</button>' +
+                        '<a href="/user/form?id='+row.id+'" type="button" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> 编辑</a>' +
                         '<a href="#" type="button" class="btn btn-danger btn-sm"><i class="fa fa-edit"></i> 删除</a>';
                 }
             }
@@ -171,7 +171,12 @@
 
     })
 
-
+    /**
+     * 查看用户信息
+     */
+    function showDetail(id){
+        App.showDetail("/user/detail?id="+id);
+    }
 </script>
 </body>
 </html>

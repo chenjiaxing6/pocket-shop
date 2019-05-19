@@ -68,5 +68,5 @@ public interface TbUserDao {
      * 查询总记录数
      * @return
      */
-    public Integer count();
+    public Integer count(TbUser tbUser);
 }
