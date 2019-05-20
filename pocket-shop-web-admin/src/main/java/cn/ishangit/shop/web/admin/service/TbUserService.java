@@ -33,11 +33,6 @@ public interface TbUserService {
     public TbUser getById(Integer id);
 
     /**
-     * 搜索
-     */
-    public List<TbUser> search(TbUser tbUser);
-
-    /**
      * 批量删除
      * @param ids
      */

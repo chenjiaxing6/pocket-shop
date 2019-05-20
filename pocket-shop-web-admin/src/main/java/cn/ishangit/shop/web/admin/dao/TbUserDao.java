@@ -32,7 +32,7 @@ public interface TbUserDao {
     public void insertTbUser(TbUser tbUser);
 
     /**
-     * 删除用户
+     * 更新用户
      * @param tbUser
      */
     public void updateTbUser(TbUser tbUser);
@@ -44,11 +44,6 @@ public interface TbUserDao {
      */
     public TbUser getById(Integer id);
 
-    /**
-     * 搜索
-     * @return
-     */
-    public List<TbUser> search(TbUser tbUser);
 
     /**
      * 批量删除

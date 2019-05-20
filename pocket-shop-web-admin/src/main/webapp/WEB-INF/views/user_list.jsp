@@ -59,10 +59,10 @@
                                         onclick="App.deleteMulti('/user/delete')"><i class="fa fa-trash"></i>
                                     批量删除
                                 </button>&nbsp;&nbsp;&nbsp;
-                                <a href="#" type="button" class="btn btn-default btn-sm"><i
-                                        class="fa fa-cloud-upload"></i> 导入</a>&nbsp;&nbsp;&nbsp;
-                                <a href="#" type="button" class="btn btn-default btn-sm"><i
-                                        class="fa fa-cloud-download"></i> 导出</a>&nbsp;&nbsp;&nbsp;
+                                <button onclick="alert('开发中')" type="button" class="btn btn-default btn-sm"><i
+                                        class="fa fa-cloud-upload"></i> 导入</button>&nbsp;&nbsp;&nbsp;
+                                <button  onclick="alert('开发中')" type="button" class="btn btn-default btn-sm"><i
+                                        class="fa fa-cloud-download"></i> 导出</button>&nbsp;&nbsp;&nbsp;
                                 <button class="btn btn-primary btn-sm"
                                         onclick="$('.search-panle').css('display')=='none'?$('.search-panle').show():$('.search-panle').hide()">
                                     <i
@@ -70,15 +70,13 @@
                                 </button>
                             </div>
 
-                            <div class="row search-panle" style="padding-left: 5px;display: none">
-                                <form:form cssClass="form-horizontal" action="/user/search" method="post"
-                                           modelAttribute="tbUser">
-                                    <div class="row">
+                            <div class="row search-panle" style="padding-left: 5px; padding-top:10px;display: none">
+                                    <div class="row form-horizontal">
                                         <div class="col-xs-3">
                                             <div class="form-group">
                                                 <label for="email" class="col-sm-3 control-label">邮箱</label>
                                                 <div class="col-sm-8">
-                                                    <form:input path="email" cssClass="form-control " placeholder="邮箱"/>
+                                                    <input name="email" id="email" class="form-control " placeholder="邮箱"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -86,8 +84,7 @@
                                             <div class="form-group">
                                                 <label for="username" class="col-sm-3 control-label">姓名</label>
                                                 <div class="col-sm-8">
-                                                    <form:input path="username" cssClass="form-control"
-                                                                placeholder="姓名"/>
+                                                    <input id="username" name="username" class="form-control" placeholder="姓名"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -95,15 +92,14 @@
                                             <div class="form-group">
                                                 <label for="phone" class="col-sm-3 control-label">手机</label>
                                                 <div class="col-sm-8">
-                                                    <form:input path="phone" cssClass="form-control" placeholder="手机"/>
+                                                    <input id="phone" name="phone" class="form-control" placeholder="手机"/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xs-3">
-                                            <button type="submit" class="btn btn-info">搜索</button>
+                                            <button onclick="search()" class="btn btn-info">搜索</button>
                                         </div>
                                     </div>
-                                </form:form>
                             </div>
 
                         </div>
@@ -146,6 +142,7 @@
 <!--自定义模态框-->
 <sys:model></sys:model>
 <script>
+    var _dataTable;
     $(function () {
         var columns = [
             {
@@ -162,20 +159,37 @@
                 "data": function (row, type, val, meta) {
                     return '<button  onclick="showDetail('+row.id+')" type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i> 查看</button>' +
                         '<a href="/user/form?id='+row.id+'" type="button" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> 编辑</a>' +
-                        '<a href="#" type="button" class="btn btn-danger btn-sm"><i class="fa fa-edit"></i> 删除</a>';
+                        '<a href="#" type="button" onclick="deleSinle('+row.id+')" class="btn btn-danger btn-sm"><i class="fa fa-edit"></i> 删除</a>';
                 }
             }
         ];
 
-        App.initDataTables("/user/page", columns);
+        _dataTable = App.initDataTables("/user/page", columns);
 
     })
+    
+    function search() {
+        var username = $("#username").val();
+        var email = $("#email").val();
+        var  phone = $("#phone").val();
+        var param = {
+            "username": username,
+            "email": email,
+            "phone":phone,
+        };
+        _dataTable.settings()[0].ajax.data = param;
+        _dataTable.ajax.reload();
+    }
 
     /**
      * 查看用户信息
      */
     function showDetail(id){
         App.showDetail("/user/detail?id="+id);
+    }
+
+    function deleSinle(id) {
+        App.deleteSingle("/user/delete",id)
     }
 </script>
 </body>

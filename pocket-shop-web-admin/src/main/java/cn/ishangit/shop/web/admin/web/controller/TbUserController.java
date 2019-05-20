@@ -16,7 +16,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -48,8 +47,6 @@ public class TbUserController {
      */
     @RequestMapping(value = "list",method = RequestMethod.GET)
     public String list(Model model){
-        List<TbUser> tbUsers = userService.selectAll();
-        model.addAttribute("tbUsers",tbUsers);
         return "user_list";
     }
 
@@ -80,12 +77,6 @@ public class TbUserController {
         }
     }
 
-    @RequestMapping(value = "search",method = RequestMethod.POST)
-    public String search(TbUser tbUser,Model model){
-        List<TbUser> tbUsers = userService.search(tbUser);
-        model.addAttribute("tbUsers",tbUsers);
-        return "user_list";
-    }
 
     /**
      * 批量删除用户信息
@@ -108,6 +99,12 @@ public class TbUserController {
         }
     }
 
+    /**
+     * 分页查询
+     * @param request
+     * @param tbUser
+     * @return
+     */
     @RequestMapping(value = "page",method = RequestMethod.GET)
     @ResponseBody
     public PageInfo<TbUser> page(HttpServletRequest request,TbUser tbUser){
