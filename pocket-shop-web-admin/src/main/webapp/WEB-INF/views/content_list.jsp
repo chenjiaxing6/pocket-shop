@@ -12,7 +12,7 @@
 <%@ taglib prefix="sys" tagdir="/WEB-INF/tags/sys" %>
 <html>
 <head>
-    <title>口袋商城后台管理| 用户列表页</title>
+    <title>口袋商城后台管理| 内容列表页</title>
     <jsp:include page="../includs/header.jsp"/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -31,12 +31,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                用户管理
-                <small>user manage</small>
+                内容管理
+                <small>content manage</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-                <li class="active">用户管理</li>
+                <li class="active">内容管理</li>
             </ol>
             <br/>
             <!-- /.row -->
@@ -50,13 +50,13 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-header">
-                            <h3 class="box-title">用户列表</h3>
+                            <h3 class="box-title">内容列表</h3>
 
                             <div class="row" style="padding-left: 15px;padding-top: 13px;">
-                                <a href="/user/form" type="button" class="btn btn-default btn-sm"><i
+                                <a href="/content/form" type="button" class="btn btn-default btn-sm"><i
                                         class="fa fa-plus"></i> 新增</a>&nbsp;&nbsp;&nbsp;
                                 <button href="#" type="button" class="btn btn-default btn-sm deleteAll"
-                                        onclick="App.deleteMulti('/user/delete')"><i class="fa fa-trash"></i>
+                                        onclick="App.deleteMulti('/content/delete')"><i class="fa fa-trash"></i>
                                     批量删除
                                 </button>&nbsp;&nbsp;&nbsp;
                                 <button onclick="alert('开发中')" type="button" class="btn btn-default btn-sm"><i
@@ -74,25 +74,25 @@
                                     <div class="row form-horizontal">
                                         <div class="col-xs-3">
                                             <div class="form-group">
-                                                <label for="email" class="col-sm-3 control-label">邮箱</label>
+                                                <label for="title" class="col-sm-3 control-label">标题</label>
                                                 <div class="col-sm-8">
-                                                    <input name="email" id="email" class="form-control " placeholder="邮箱"/>
+                                                    <input name="title" id="title" class="form-control " placeholder="标题"/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xs-3">
                                             <div class="form-group">
-                                                <label for="username" class="col-sm-3 control-label">姓名</label>
+                                                <label for="subTitle" class="col-sm-3 control-label">子标题</label>
                                                 <div class="col-sm-8">
-                                                    <input id="username" name="username" class="form-control" placeholder="姓名"/>
+                                                    <input id="subTitle" name="subTitle" class="form-control" placeholder="二级标题"/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xs-3">
                                             <div class="form-group">
-                                                <label for="phone" class="col-sm-3 control-label">手机</label>
+                                                <label for="title_Desc" class="col-sm-4 control-label">标题描述</label>
                                                 <div class="col-sm-8">
-                                                    <input id="phone" name="phone" class="form-control" placeholder="手机"/>
+                                                    <input id="title_Desc" name="title_Desc" class="form-control" placeholder="标题描述"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,9 +110,12 @@
                                 <tr>
                                     <th><input type="checkbox" class="minimal icheck_master"/></th>
                                     <th>ID</th>
-                                    <th>用户名</th>
-                                    <th>手机</th>
-                                    <th>邮箱</th>
+                                    <th>标题</th>
+                                    <th>子标题</th>
+                                    <th>标题描述</th>
+                                    <th>url</th>
+                                    <%--<th>图片1</th>--%>
+                                    <%--<th>图片2</th>--%>
                                     <th>更新时间</th>
                                     <th>操作</th>
                                 </tr>
@@ -151,47 +154,53 @@
                 }
             },
             {"data": "id"},
-            {"data": "username"},
-            {"data": "phone"},
-            {"data": "email"},
-            {"data":function (row, type, val, meta) {
-                    return DateTime.format(row.updated,"yyyy-MM-dd HH:mm:ss");
+            {"data": "title"},
+            {"data": "subTitle"},
+            {"data": "titleDesc"},
+            {"data": "url"},
+            // {"data": "pic"},
+            // {"data": "pic2"},
+            {"data": function (row, type, val, meta) {
+                return DateTime.format(row.updated,"yyyy-MM-dd HH:mm:ss");
                 }},
             {
                 "data": function (row, type, val, meta) {
                     return '<button  onclick="showDetail('+row.id+')" type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i> 查看</button>' +
-                        '<a href="/user/form?id='+row.id+'" type="button" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> 编辑</a>' +
+                        '<a href="/content/form?id='+row.id+'" type="button" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> 编辑</a>' +
                         '<a href="#" type="button" onclick="deleSinle('+row.id+')" class="btn btn-danger btn-sm"><i class="fa fa-edit"></i> 删除</a>';
                 }
             }
         ];
 
-        _dataTable = App.initDataTables("/user/page", columns);
+        _dataTable = App.initDataTables("/content/page", columns);
 
     })
-    
+
+    /**
+     * 搜索
+     * */
     function search() {
-        var username = $("#username").val();
-        var email = $("#email").val();
-        var  phone = $("#phone").val();
+        var title = $("#title").val();
+        var subTitle = $("#subTitle").val();
+        var  titleDesc = $("#titleDesc").val();
         var param = {
-            "username": username,
-            "email": email,
-            "phone":phone,
+            "title": title,
+            "subTitle": subTitle,
+            "titleDesc":titleDesc,
         };
         _dataTable.settings()[0].ajax.data = param;
         _dataTable.ajax.reload();
     }
 
     /**
-     * 查看用户信息
+     * 查看内容信息
      */
     function showDetail(id){
-        App.showDetail("/user/detail?id="+id);
+        App.showDetail("/content/detail?id="+id);
     }
 
     function deleSinle(id) {
-        App.deleteSingle("/user/delete",id)
+        App.deleteSingle("/content/delete",id)
     }
 </script>
 </body>

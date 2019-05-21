@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ishangit.shop.web.admin.dao.TbContentDao">
+    <sql id="tbContentColumns">
+        c.id,
+        c.category_id as categoryId,
+        c.title,
+        c.sub_title as subTitle,
+        c.title_desc as titleDesc,
+        c.url,
+        c.pic,
+        c.pic2,
+        c.content,
+        c.created,
+        c.updated
+    </sql>
+
+    <insert id="insertTbContent" parameterType="TbContent">
+        INSERT INTO tb_content
+        VALUES
+        (NULL,#{categoryId},#{title},#{subTitle},#{titleDesc},#{url},#{pic},#{pic2},#{content},#{created},#{updated})
+    </insert>
+
+    <update id="updateTbContent">
+        UPDATE tb_content
+        SET category_id = #{categoryId},title = #{title},sub_title = #{subTitle},title_desc = #{titleDesc},url = #{url},pic=#{pic},pic2= #{pic2},
+            content=#{content},created = #{created},updated = #{updated}
+        WHERE id = #{id}
+    </update>
+
+    <select id="selectAll" resultType="TbContent">
+        SELECT
+            <include refid="tbContentColumns"/>
+        FROM
+            tb_content AS c
+    </select>
+
+
+    <select id="getById" resultType="TbContent">
+      select
+      <include refid="tbContentColumns"/>
+      from tb_content c
+      where id = #{id}
+    </select>
+
+    <select id="page" resultType="TbContent" parameterType="java.util.Map">
+        select <include refid="tbContentColumns"/>
+        FROM
+        tb_content c
+          <where>
+              <if test="tbContent.title !='' and tbContent.title != null" >
+                  and title like concat('%',#{tbContent.title},'%')
+              </if>
+              <if test="tbContent.subTitle !='' and tbContent.subTitle != null" >
+                  and sub_title like concat('%',#{tbContent.subTitle},'%')
+              </if>
+              <if test="tbContent.titleDesc !='' and tbContent.titleDesc != null" >
+                  and title_desc like concat('%',#{tbContent.subTitle},'%')
+              </if>
+          </where>
+        limit #{start},#{length}
+    </select>
+
+    <select id="count" resultType="java.lang.Integer">
+      select count(*) from tb_content
+        <where>
+            <if test="title !='' and title != null" >
+                and title like concat('%',#{title},'%')
+            </if>
+            <if test="subTitle !='' and subTitle != null" >
+                and sub_title like concat('%',#{subTitle},'%')
+            </if>
+            <if test="titleDesc !='' and titleDesc != null" >
+                and title_desc like concat('%',#{titleDesc},'%')
+            </if>
+        </where>
+    </select>
+
+    <delete id="deleteMulti">
+        delete from tb_content
+        where id in
+        <foreach collection="array" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

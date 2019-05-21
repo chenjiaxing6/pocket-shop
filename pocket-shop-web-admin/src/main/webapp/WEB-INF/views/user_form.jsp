@@ -10,7 +10,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <title>口袋商城后台管理| 主页</title>
+    <title>口袋商城后台管理| 用户表单页</title>
     <jsp:include page="../includs/header.jsp"/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
