@@ -1,6 +1,7 @@
 package cn.ishangit.shop.domain;
 
 import cn.ishangit.shop.commons.persistence.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Chen
@@ -11,7 +12,8 @@ public class TbContentCategory extends BaseEntity {
     private String name;
     private  Integer status;
     private Integer sortOrder;
-    private boolean isParent;
+    @JsonProperty("isParent")
+    private Boolean isParent;
 
     public Long getParentId() {
         return parentId;
@@ -45,11 +47,11 @@ public class TbContentCategory extends BaseEntity {
         this.sortOrder = sortOrder;
     }
 
-    public boolean isParent() {
+    public Boolean getParent() {
         return isParent;
     }
 
-    public void setParent(boolean parent) {
+    public void setParent(Boolean parent) {
         isParent = parent;
     }
 }

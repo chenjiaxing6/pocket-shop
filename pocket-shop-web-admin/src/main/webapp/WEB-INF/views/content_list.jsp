@@ -157,7 +157,9 @@
             {"data": "title"},
             {"data": "subTitle"},
             {"data": "titleDesc"},
-            {"data": "url"},
+            {"data": function (row, type, val, meta) {
+                    return "<a href='"+row.url+"' target='_blank'>查看链接</a>";
+                }},
             // {"data": "pic"},
             // {"data": "pic2"},
             {"data": function (row, type, val, meta) {
@@ -199,6 +201,10 @@
         App.showDetail("/content/detail?id="+id);
     }
 
+    /**
+     * 删除内容
+     * @param id
+     */
     function deleSinle(id) {
         App.deleteSingle("/content/delete",id)
     }

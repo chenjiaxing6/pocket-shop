@@ -169,7 +169,9 @@
         _dataTable = App.initDataTables("/user/page", columns);
 
     })
-    
+    /**
+     * 搜索
+     * */
     function search() {
         var username = $("#username").val();
         var email = $("#email").val();
@@ -184,12 +186,16 @@
     }
 
     /**
-     * 查看用户信息
+     * 查看用户信息 模态框
      */
     function showDetail(id){
         App.showDetail("/user/detail?id="+id);
     }
 
+    /**
+     * 删除单个用户
+     * @param id
+     */
     function deleSinle(id) {
         App.deleteSingle("/user/delete",id)
     }

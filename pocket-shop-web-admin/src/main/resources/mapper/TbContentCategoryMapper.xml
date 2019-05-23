@@ -22,4 +22,10 @@
             sort_order,
             is_parent desc
     </select>
+    <select id="selectByPid" resultType="TbContentCategory">
+        select
+        <include refid="tbContentCategoryconlumns"/>
+        from tb_content_category a
+        where parent_id = #{parentId}
+    </select>
 </mapper>

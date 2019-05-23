@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +41,20 @@ public class TbContentCategoryController {
     }
 
     /**
+     * 根据父ID查询所有子分类
+     * @param id
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "treeData",method = RequestMethod.POST)
+    public List<TbContentCategory> treeData(Long id){
+        if (id == null){
+            id = 0l;
+        }
+        return contentCategoryService.selectByPid(id);
+    }
+
+    /**
      * 排序
      * @param sourceList 排序前的集合
      * @param targetList 排序后的集合
@@ -51,7 +66,8 @@ public class TbContentCategoryController {
                 targetList.add(tbContentCategory);
 
                 //判断有没有子节点
-                if (tbContentCategory.isParent()){
+                Boolean parent = tbContentCategory.getParent();
+                if (parent){
                     for (TbContentCategory contentCategory : sourceList) {
                         if (contentCategory.getParentId() .equals(tbContentCategory.getId())){
                             sortList(sourceList,targetList,tbContentCategory.getId());
