@@ -5,6 +5,7 @@ import cn.ishangit.shop.web.admin.service.TbContentCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,6 +22,15 @@ import java.util.List;
 public class TbContentCategoryController {
     @Autowired
     private TbContentCategoryService contentCategoryService;
+
+    @ModelAttribute
+    public TbContentCategory getTbContentCategory(Long id){
+        TbContentCategory tbContentCategory = new TbContentCategory();
+        if (id != null){
+
+        }
+        return tbContentCategory;
+    }
 
     /**
      * 查询分类列表
@@ -54,6 +64,11 @@ public class TbContentCategoryController {
         return contentCategoryService.selectByPid(id);
     }
 
+    @RequestMapping(value = "form",method = RequestMethod.GET)
+    public String contentCategoryForm(){
+        return "content_category_form";
+    }
+
     /**
      * 排序
      * @param sourceList 排序前的集合
@@ -66,7 +81,7 @@ public class TbContentCategoryController {
                 targetList.add(tbContentCategory);
 
                 //判断有没有子节点
-                Boolean parent = tbContentCategory.getParent();
+                Boolean parent = tbContentCategory.getIsParent();
                 if (parent){
                     for (TbContentCategory contentCategory : sourceList) {
                         if (contentCategory.getParentId() .equals(tbContentCategory.getId())){

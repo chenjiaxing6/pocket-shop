@@ -11,11 +11,9 @@
 <%@ taglib prefix="sys" tagdir="/WEB-INF/tags/sys" %>
 <html>
 <head>
-    <title>口袋商城后台管理| 内容表单页</title>
+    <title>口袋商城后台管理| 内容分类表单页</title>
     <jsp:include page="../includs/header.jsp"/>
     <link href="/static/assets/plugins/jquery-ztree/css/zTreeStyle/zTreeStyle.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/static/assets/plugins/dropzone/min/dropzone.min.css" />
-    <link rel="stylesheet" href="/static/assets/plugins/dropzone/min/basic.min.css" />
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -33,12 +31,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                内容管理
-                <small>content manage</small>
+                内容分类管理
+                <small>content category manage</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-                <li class="active">内容管理</li>
+                <li class="active">内容分类管理</li>
             </ol>
             <br/>
 
@@ -56,68 +54,32 @@
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-                        <form:form cssClass="form-horizontal" action="/content/save" method="post"
-                                   modelAttribute="tbContent" id="inputForm">
-                            <form:hidden path="id" cssClass="form-control required email"/>
+                        <form:form cssClass="form-horizontal" action="/user/save" method="post"
+                                   modelAttribute="tbContentCategory" id="inputForm">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="categoryId" class="col-sm-2 control-label">分类</label>
+                                    <label for="id" class="col-sm-2 control-label">父分类</label>
 
                                     <div class="col-sm-10">
-                                        <form:hidden path="categoryId" />
+                                        <form:hidden path="id" />
                                         <input id="categoryName" class="form-control required" readonly="true"
                                                     data-toggle="modal" data-target="#modal-default"/>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="title" class="col-sm-2 control-label" >标题</label>
+                                    <label for="name" class="col-sm-2 control-label" >分类名称</label>
 
                                     <div class="col-sm-10">
-                                        <form:input path="title" cssClass="form-control required" placeholder="标题"/>
+                                        <form:input path="name" cssClass="form-control required" placeholder="分类名称"/>
                                     </div>
                                 </div>
+
                                 <div class="form-group">
-                                    <label for="subTitle" class="col-sm-2 control-label" >子标题</label>
+                                    <label for="sortOrder" class="col-sm-2 control-label" >分类排序</label>
 
                                     <div class="col-sm-10">
-                                        <form:input path="subTitle" cssClass="form-control required" placeholder="子标题"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="titleDesc" class="col-sm-2 control-label" >标题描述</label>
-
-                                    <div class="col-sm-10">
-                                        <form:input path="titleDesc" cssClass="form-control required" placeholder="标题描述"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="url" class="col-sm-2 control-label" >链接</label>
-
-                                    <div class="col-sm-10">
-                                        <form:input path="url" cssClass="form-control required" placeholder="链接"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="url" class="col-sm-2 control-label">图片1</label>
-
-                                    <div class="col-sm-10">
-                                        <form:hidden path="pic" cssClass="form-control required" readonly="true"/>
-                                        <div id="dropz" class="dropzone"></div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="url" class="col-sm-2 control-label">图片2</label>
-
-                                    <div class="col-sm-10">
-                                        <form:input path="pic2" cssClass="form-control required"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="content" class="col-sm-2 control-label">内容</label>
-
-                                    <div class="col-sm-10">
-                                        <form:textarea path="content" cssClass="form-control required"/>
+                                        <form:input path="sortOrder" cssClass="form-control required digits" placeholder="分类排序"/>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +106,6 @@
                message='<ul id="myTree" class="ztree" style="width:260px; overflow:auto;"></ul>'></sys:model>
 </div>
 <script src="/static/assets/plugins/jquery-ztree/js/jquery.ztree.core-3.5.min.js"></script>
-<script src="/static/assets/plugins/dropzone/min/dropzone.min.js"></script>
 <script>
     $(function () {
         App.initZTree("/content/category/treeData",["id"],function (nodes) {
@@ -155,17 +116,6 @@
             $("#modal-default").modal("hide");
         });
     })
-    var myDropzone = new Dropzone("#dropz", {
-        url: "/upload",
-        dictDefaultMessage: '拖动文件至此或者点击上传', // 设置默认的提示语句
-        paramName: "dropzFile", // 传到后台的参数名称
-        init: function () {
-            this.on("success", function (file, data) {
-                // 上传成功触发的事件
-                $("#pic").val(data.fileName);
-            });
-        }
-    });
 </script>
 </body>
 </html>

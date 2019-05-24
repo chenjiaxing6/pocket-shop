@@ -67,7 +67,7 @@ public class TbContentController {
         BaseResult baseResult = tbContentService.save(tbContent);
         if (baseResult.getStatus() == BaseResult.STATUS_SUCCESS) {
             redirectAttributes.addFlashAttribute("baseResult", baseResult);
-            return "redirect:/user/list";
+            return "redirect:/content/list";
         }
         else {
             model.addAttribute("baseResult",baseResult);

@@ -1,50 +1,26 @@
 package cn.ishangit.shop.domain;
 
+import cn.ishangit.shop.commons.constant.RegexUtils;
 import cn.ishangit.shop.commons.persistence.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.Pattern;
 
 /**
  * @author Chen
  * @create 2019-05-16 12:06
  */
+@Data
 public class TbUser extends BaseEntity {
+    @Length(min = 6,max = 20,message = "用户名长度必须在6-20位之间")
     private  String username;
-    private  String password;
-    private  String phone ;
-    private  String email;
-
-
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     @JsonIgnore
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    @Length(min = 6,max = 20,message = "密码长度必须在6-20位之间")
+    private  String password;
+    @Pattern(regexp = RegexUtils.PHONE,message = "手机格式不符合要求")
+    private  String phone ;
+    @Pattern(regexp = RegexUtils.EMAIL,message = "邮箱格式不符合要求")
+    private  String email;
 }

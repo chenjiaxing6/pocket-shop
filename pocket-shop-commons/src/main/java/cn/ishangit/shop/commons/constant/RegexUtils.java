@@ -9,13 +9,16 @@ import java.util.regex.Pattern;
  */
 public class RegexUtils {
 
+    public static  final String EMAIL = "\\w+@\\w+\\.[a-z]+(\\.[a-z]+)?";
+    public static  final String PHONE = "(\\+\\d+)?1[34578]\\d{9}$";
+
     /**
      * 验证Email
      * @param email email地址，格式：zhangsan@zuidaima.com，zhangsan@xxx.com.cn，xxx代表邮件服务商
      * @return 验证成功返回true，验证失败返回false
      */
     public static boolean checkEmail(String email) {
-        String regex = "\\w+@\\w+\\.[a-z]+(\\.[a-z]+)?";
+        String regex = EMAIL;
         return Pattern.matches(regex, email);
     }
 
@@ -39,7 +42,7 @@ public class RegexUtils {
      * @return 验证成功返回true，验证失败返回false
      */
     public static boolean checkMobile(String mobile) {
-        String regex = "(\\+\\d+)?1[34578]\\d{9}$";
+        String regex = PHONE;
         return Pattern.matches(regex,mobile);
     }
 

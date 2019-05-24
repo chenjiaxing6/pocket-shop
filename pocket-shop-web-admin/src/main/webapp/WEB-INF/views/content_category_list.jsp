@@ -54,12 +54,8 @@
                             <h3 class="box-title">分类列表</h3>
 
                             <div class="row" style="padding-left: 15px;padding-top: 13px;">
-                                <a href="#" type="button" class="btn btn-default btn-sm"><i
+                                <a href="/content/category/form" type="button" class="btn btn-default btn-sm"><i
                                         class="fa fa-plus"></i> 新增</a>&nbsp;&nbsp;&nbsp;
-                                <button href="#" type="button" class="btn btn-default btn-sm deleteAll"
-                                        onclick="App.deleteMulti('/user/delete')"><i class="fa fa-trash"></i>
-                                    批量删除
-                                </button>&nbsp;&nbsp;&nbsp;
                             </div>
 
                         </div>
