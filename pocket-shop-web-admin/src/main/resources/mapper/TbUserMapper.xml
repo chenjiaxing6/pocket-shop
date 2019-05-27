@@ -54,14 +54,14 @@
         FROM
         tb_user
           <where>
-              <if test="tbUser.username !='' and tbUser.username != null" >
-                  and username like concat('%',#{tbUser.username},'%')
+              <if test="baseParams.username !='' and baseParams.username != null" >
+                  and username like concat('%',#{baseParams.username},'%')
               </if>
-              <if test="tbUser.phone !='' and tbUser.phone != null" >
-                  and phone like concat('%',#{tbUser.phone},'%')
+              <if test="baseParams.phone !='' and baseParams.phone != null" >
+                  and phone like concat('%',#{baseParams.phone},'%')
               </if>
-              <if test="tbUser.email !='' and tbUser.email != null" >
-                  and email like concat('%',#{tbUser.email},'%')
+              <if test="baseParams.email !='' and baseParams.email != null" >
+                  and email like concat('%',#{baseParams.email},'%')
               </if>
           </where>
         limit #{start},#{length}

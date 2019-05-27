@@ -3,27 +3,19 @@ package cn.ishangit.shop.web.admin.service.impl;
 import cn.ishangit.shop.commons.dto.BaseResult;
 import cn.ishangit.shop.commons.validator.BeanValidator;
 import cn.ishangit.shop.domain.TbContentCategory;
+import cn.ishangit.shop.web.admin.abstracts.AbstractBaseTreeServiceImpl;
 import cn.ishangit.shop.web.admin.dao.TbContentCategoryDao;
 import cn.ishangit.shop.web.admin.service.TbContentCategoryService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.List;
 
 /**
  * @author Chen
  * @create 2019-05-20 14:34
  */
 @Service
-public class TbContentCategoryServiceImpl implements TbContentCategoryService {
-    @Autowired
-    private TbContentCategoryDao tbContentCategoryDao;
-
-    @Override
-    public List<TbContentCategory> selectAll() {
-        return tbContentCategoryDao.selectAll();
-    }
+public class TbContentCategoryServiceImpl extends AbstractBaseTreeServiceImpl<TbContentCategory,TbContentCategoryDao> implements TbContentCategoryService {
 
     @Override
     public BaseResult save(TbContentCategory entity) {
@@ -52,34 +44,19 @@ public class TbContentCategoryServiceImpl implements TbContentCategoryService {
                     TbContentCategory currentCategoryParent = getById(parent.getId());
                     if (currentCategoryParent!= null){
                         currentCategoryParent.setIsParent(true);
-                        tbContentCategoryDao.update(currentCategoryParent);
+                        update(currentCategoryParent);
                     }
                 }
-                tbContentCategoryDao.insert(entity);
+                insert(entity);
                 return BaseResult.success("新增分类信息成功!");
             }
             //修改
             else {
-                tbContentCategoryDao.update(entity);
+                update(entity);
                 return BaseResult.success("更新分类信息成功!");
             }
         }
     }
 
-    @Override
-    public TbContentCategory getById(Long id) {
-        return tbContentCategoryDao.getById(id.intValue());
-    }
-
-    @Override
-    public void deleteMulti(String[] ids) {
-        tbContentCategoryDao.deleteMulti(ids);
-    }
-
-
-    @Override
-    public List<TbContentCategory> selectByPid(Long pid) {
-        return tbContentCategoryDao.selectByPid(pid);
-    }
 
 }

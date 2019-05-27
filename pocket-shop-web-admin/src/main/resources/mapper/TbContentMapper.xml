@@ -56,14 +56,14 @@
         tb_content c
         <include refid="contentLeftJoin"/>
           <where>
-              <if test="tbContent.title !='' and tbContent.title != null" >
-                  and title like concat('%',#{tbContent.title},'%')
+              <if test="baseParams.title !='' and baseParams.title != null" >
+                  and title like concat('%',#{baseParams.title},'%')
               </if>
-              <if test="tbContent.subTitle !='' and tbContent.subTitle != null" >
-                  and sub_title like concat('%',#{tbContent.subTitle},'%')
+              <if test="baseParams.subTitle !='' and baseParams.subTitle != null" >
+                  and sub_title like concat('%',#{baseParams.subTitle},'%')
               </if>
-              <if test="tbContent.titleDesc !='' and tbContent.titleDesc != null" >
-                  and title_desc like concat('%',#{tbContent.subTitle},'%')
+              <if test="baseParams.titleDesc !='' and baseParams.titleDesc != null" >
+                  and title_desc like concat('%',#{baseParams.subTitle},'%')
               </if>
           </where>
         limit #{start},#{length}
