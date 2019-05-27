@@ -1,5 +1,6 @@
 package cn.ishangit.shop.web.admin.web.controller;
 
+import cn.ishangit.shop.commons.dto.BaseResult;
 import cn.ishangit.shop.domain.TbContentCategory;
 import cn.ishangit.shop.web.admin.service.TbContentCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,7 @@ public class TbContentCategoryController {
     public TbContentCategory getTbContentCategory(Long id){
         TbContentCategory tbContentCategory = new TbContentCategory();
         if (id != null){
-
+            tbContentCategory = contentCategoryService.getById(id);
         }
         return tbContentCategory;
     }
@@ -64,9 +66,30 @@ public class TbContentCategoryController {
         return contentCategoryService.selectByPid(id);
     }
 
+    /**
+     * 跳转到表单页
+     * @param tbContentCategory
+     * @return
+     */
     @RequestMapping(value = "form",method = RequestMethod.GET)
-    public String contentCategoryForm(){
+    public String contentCategoryForm(TbContentCategory tbContentCategory){
         return "content_category_form";
+    }
+
+    /**
+     * 保存分类信息
+     */
+    @RequestMapping(value = "save",method = RequestMethod.POST)
+    public String save(TbContentCategory tbContentCategory, Model model, RedirectAttributes redirectAttributes){
+        BaseResult baseResult = contentCategoryService.save(tbContentCategory);
+        //保存成功
+        if (baseResult.getStatus() == 200){
+            redirectAttributes.addFlashAttribute("baseResult",baseResult);
+            return "redirect:/content/category/list";
+        }else {
+            model.addAttribute("baseResult",baseResult);
+            return contentCategoryForm(tbContentCategory);
+        }
     }
 
     /**

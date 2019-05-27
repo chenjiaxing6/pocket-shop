@@ -54,16 +54,17 @@
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-                        <form:form cssClass="form-horizontal" action="/user/save" method="post"
+                        <form:form cssClass="form-horizontal" action="/content/category/save" method="post"
                                    modelAttribute="tbContentCategory" id="inputForm">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="id" class="col-sm-2 control-label">父分类</label>
+                                    <label class="col-sm-2 control-label" >父分类</label>
 
                                     <div class="col-sm-10">
-                                        <form:hidden path="id" />
-                                        <input id="categoryName" class="form-control required" readonly="true"
-                                                    data-toggle="modal" data-target="#modal-default"/>
+                                        <form:hidden path="id"/>
+                                        <form:hidden path="parent.id" id="categoryId"/>
+                                        <input id="categoryName" class="form-control" readonly="true"
+                                                    data-toggle="modal" data-target="#modal-default" value="${tbContentCategory.parent.name}"/>
                                     </div>
                                 </div>
 

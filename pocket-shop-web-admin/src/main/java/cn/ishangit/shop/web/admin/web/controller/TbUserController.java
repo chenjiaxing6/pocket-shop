@@ -31,7 +31,7 @@ public class TbUserController {
     private TbUserService userService;
 
     @ModelAttribute
-    public TbUser getTbUser( Integer id){
+    public TbUser getTbUser( Long id){
         TbUser tbUser = new TbUser();
         if (id != null){
             tbUser = userService.getById(id);

@@ -29,7 +29,7 @@ public class TbContentController {
     private TbContentService tbContentService;
 
     @ModelAttribute
-    public TbContent getTbContent(Integer id){
+    public TbContent getTbContent(Long id){
         TbContent tbContent = new TbContent();
         if (id != null){
             tbContent = tbContentService.getById(id);

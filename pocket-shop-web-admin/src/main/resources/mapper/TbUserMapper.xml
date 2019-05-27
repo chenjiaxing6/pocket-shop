@@ -11,13 +11,13 @@
         tb_user.updated
     </sql>
 
-    <insert id="insertTbUser" parameterType="TbUser">
+    <insert id="insert" parameterType="TbUser">
         INSERT INTO tb_user
         VALUES
         (NULL,#{username},#{password},#{phone},#{email},#{created},#{updated})
     </insert>
 
-    <update id="updateTbUser">
+    <update id="update">
         UPDATE tb_user
         SET username = #{username},password = #{password},phone = #{phone},email = #{email},created = #{created},updated = #{updated}
         WHERE id = #{id}

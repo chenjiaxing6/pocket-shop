@@ -22,12 +22,22 @@ import java.util.UUID;
 public class FileUploadController {
     public static final  String UPLOAD_DIC = "/static/upload";
 
+    /**
+     * 文件上传
+     * @param dropzFile ：dropzone上传的文件
+     * @param editorFile：wangEditor上传的文件
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "upload",method = RequestMethod.POST)
-    public Map<String,Object> upload(MultipartFile dropzFile, HttpServletRequest request){
+    public Map<String,Object> upload(MultipartFile dropzFile,MultipartFile editorFile, HttpServletRequest request){
         Map<String,Object> res = new HashMap<String, Object>();
+
+        //判断上传上来的文件是dropFile  还是editorFile
+        MultipartFile myfile = dropzFile == null ?editorFile :dropzFile;
+
         //获取文件名
-        String fileName = dropzFile.getOriginalFilename();
+        String fileName = myfile.getOriginalFilename();
         //获取文件后缀名
         String fileSuffix = fileName.substring(fileName.lastIndexOf("."));
         // 文件存放路径
@@ -40,12 +50,29 @@ public class FileUploadController {
         //写入文件
          file = new File(filePath, UUID.randomUUID()+fileSuffix);
         try {
-            dropzFile.transferTo(file);
+            myfile.transferTo(file);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        res.put("fileName",UPLOAD_DIC+file.getName());
-        return res;
+
+        //dropzone上传
+        if (dropzFile != null) {
+            res.put("fileName", UPLOAD_DIC + file.getName());
+            return res;
+        }
+
+        //wangEditor上传
+        else {
+            /**
+             * getScheme:服务端提供的协议  http/https
+             * getServerName:：服务器名称
+             * getServerPort:服务器端口
+             */
+            String serverPath = request.getScheme() +"://"+request.getServerName()+":"+request.getServerPort();
+            res.put("errno",0);
+            res.put("data",new String[]{serverPath+UPLOAD_DIC+"/"+file.getName()});
+            return res;
+        }
     }
 
 }

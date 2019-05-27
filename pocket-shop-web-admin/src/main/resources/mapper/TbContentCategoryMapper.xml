@@ -9,7 +9,13 @@
         a.sort_order sortOrder,
         a.is_parent isParent,
         a.created,
-        a.updated
+        a.updated,
+        IFNULL( b.id, '0' ) AS `parent.id`,
+        IFNULL( b.NAME, '/' ) AS `parent.name`
+    </sql>
+
+    <sql id="contentCategoryLeftJoin">
+        LEFT JOIN tb_content_category AS b ON a.parent_id = b.id
     </sql>
 
     <select id="selectAll" resultType="TbContentCategory">
@@ -17,15 +23,37 @@
             <include refid="tbContentCategoryconlumns"/>
         FROM
             tb_content_category a
+        <include refid="contentCategoryLeftJoin"/>
         ORDER BY
-            parent_id ,
-            sort_order,
-            is_parent desc
+            a.parent_id ,
+            a.sort_order,
+            a.is_parent desc
     </select>
     <select id="selectByPid" resultType="TbContentCategory">
         select
         <include refid="tbContentCategoryconlumns"/>
         from tb_content_category a
-        where parent_id = #{parentId}
+        <include refid="contentCategoryLeftJoin"/>
+        where a.parent_id = #{parentId}
     </select>
+
+    <select id="getById" resultType="TbContentCategory">
+        SELECT
+        <include refid="tbContentCategoryconlumns"/>
+        FROM
+        tb_content_category a
+        <include refid="contentCategoryLeftJoin"/>
+        WHERE a.id = #{_parameter}
+    </select>
+
+    <insert id="insert">
+        insert into tb_content_category
+        values (null ,#{parent.id},#{name},#{status},#{sortOrder},#{isParent},#{created},#{updated})
+    </insert>
+
+    <update id="update">
+        UPDATE tb_content_category
+        SET parent_id = #{parent.id},name = #{name},status=#{status},sort_order=#{sortOrder},is_parent=#{isParent},created = #{created},updated = #{updated}
+        WHERE id = #{id}
+    </update>
 </mapper>

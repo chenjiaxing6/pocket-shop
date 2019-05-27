@@ -41,21 +41,21 @@ public class TbContentServiceImpl implements TbContentService {
             //新增
             if (tbContent.getId() == null){
                 tbContent.setCreated(new Date());
-                tbContentDao.insertTbContent(tbContent);
-                return BaseResult.success("更新内容成功");
+                tbContentDao.insert(tbContent);
+                return BaseResult.success("保存内容成功");
             }
             //编辑
             else {
-                tbContentDao.updateTbContent(tbContent);
+                tbContentDao.update(tbContent);
+                return BaseResult.success("更新内容成功");
             }
-            return BaseResult.success("保存内容成功");
 
         }
     }
 
     @Override
-    public TbContent getById(Integer id) {
-        return tbContentDao.getById(id);
+    public TbContent getById(Long id) {
+        return tbContentDao.getById(id.intValue());
     }
 
     @Override

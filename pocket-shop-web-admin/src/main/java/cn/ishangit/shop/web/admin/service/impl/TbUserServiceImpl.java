@@ -59,19 +59,19 @@ public class TbUserServiceImpl implements TbUserService {
             if (tbUser.getId() == null){
                 tbUser.setCreated(new Date());
                 tbUser.setPassword(DigestUtils.md5DigestAsHex(tbUser.getPassword().getBytes()));
-                tbUserDao.insertTbUser(tbUser);
+                tbUserDao.insert(tbUser);
             }
             //编辑用户
             else {
-                tbUserDao.updateTbUser(tbUser);
+                tbUserDao.update(tbUser);
             }
              return BaseResult.success("保存用户成功!");
         }
     }
 
     @Override
-    public TbUser getById(Integer id) {
-        return tbUserDao.getById(id);
+    public TbUser getById(Long id) {
+        return tbUserDao.getById(id.intValue());
     }
 
 

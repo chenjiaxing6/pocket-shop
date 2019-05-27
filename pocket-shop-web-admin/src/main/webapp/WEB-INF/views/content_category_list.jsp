@@ -78,8 +78,8 @@
                                         <td>${c.name}</td>
                                         <td>${c.sortOrder}</td>
                                         <td>
-                                            <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-plus"></i> 新增下级菜单</a>
-                                            <a href="#" type="button" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> 编辑</a>
+                                            <a href="/content/category/form?parent.id=${c.id}&parent.name=${c.name}" type="button" class="btn btn-default btn-sm"><i class="fa fa-plus"></i> 新增下级菜单</a>
+                                            <a href="/content/category/form?id=${c.id}" type="button" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> 编辑</a>
                                             <a href="#" type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> 删除</a>
                                         </td>
                                     </tr>
@@ -111,7 +111,8 @@
 <script>
     $(function () {
         $("#treeTable").treeTable({
-            expendLevel:2//默认展开层数
+            expendLevel:2,//默认展开层数
+            column:1,
         });
     });
 </script>
