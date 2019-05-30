@@ -21,7 +21,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("content/category")
-public class TbContentCategoryController {
+public class TbContentCategoryController{
     @Autowired
     private TbContentCategoryService contentCategoryService;
 

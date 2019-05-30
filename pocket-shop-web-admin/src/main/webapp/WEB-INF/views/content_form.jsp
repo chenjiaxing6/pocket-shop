@@ -171,7 +171,7 @@
         var editor = new E('#editor');
         // 配置服务器端地址
         editor.customConfig.uploadImgServer = '/upload';
-        editor.customConfig.uploadFileName = 'editorFile';
+        editor.customConfig.uploadFileName = 'editorFiles';
         editor.create();
         $("#btnSubmit").click(function () {
             var content = editor.txt.html();

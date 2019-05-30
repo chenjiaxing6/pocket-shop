@@ -20,44 +20,25 @@ import java.util.UUID;
  */
 @Controller
 public class FileUploadController {
-    public static final  String UPLOAD_DIC = "/static/upload";
+    public static final String UPLOAD_DIC = "/static/upload";
 
     /**
      * 文件上传
-     * @param dropzFile ：dropzone上传的文件
-     * @param editorFile：wangEditor上传的文件
+     *
+     * @param dropzFile                   ：dropzone上传的文件
+     * @param editorFiles：wangEditor上传的文件
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "upload",method = RequestMethod.POST)
-    public Map<String,Object> upload(MultipartFile dropzFile,MultipartFile editorFile, HttpServletRequest request){
-        Map<String,Object> res = new HashMap<String, Object>();
-
-        //判断上传上来的文件是dropFile  还是editorFile
-        MultipartFile myfile = dropzFile == null ?editorFile :dropzFile;
-
-        //获取文件名
-        String fileName = myfile.getOriginalFilename();
-        //获取文件后缀名
-        String fileSuffix = fileName.substring(fileName.lastIndexOf("."));
-        // 文件存放路径
-        String filePath = request.getSession().getServletContext().getRealPath(UPLOAD_DIC);
-        File file = new File(filePath);
-        //如果文件不存在，创建文件夹
-        if (!file.exists()){
-            file.mkdir();
-        }
-        //写入文件
-         file = new File(filePath, UUID.randomUUID()+fileSuffix);
-        try {
-            myfile.transferTo(file);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        //dropzone上传
+    @RequestMapping(value = "upload", method = RequestMethod.POST)
+    public Map<String, Object> upload(MultipartFile dropzFile, MultipartFile[] editorFiles, HttpServletRequest request) {
+        Map<String, Object> res = new HashMap<String, Object>();
+        MultipartFile myfile = null;
+        //如果dropFile不为空  则为dropzone上传的文件
         if (dropzFile != null) {
-            res.put("fileName", UPLOAD_DIC + file.getName());
+            myfile = dropzFile;
+            String fileName = writeFile(myfile, request);
+            res.put("fileName", UPLOAD_DIC + fileName);
             return res;
         }
 
@@ -68,11 +49,46 @@ public class FileUploadController {
              * getServerName:：服务器名称
              * getServerPort:服务器端口
              */
-            String serverPath = request.getScheme() +"://"+request.getServerName()+":"+request.getServerPort();
-            res.put("errno",0);
-            res.put("data",new String[]{serverPath+UPLOAD_DIC+"/"+file.getName()});
+            String serverPath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
+            String[] stringData = new String[100];
+            int i = 0;
+            for (MultipartFile editorFile : editorFiles) {
+                String fileName = writeFile(editorFile, request);
+                stringData[i] = serverPath + UPLOAD_DIC + "/" + fileName;
+                i++;
+            }
+            res.put("errno", 0);
+            res.put("data", stringData);
             return res;
         }
+    }
+
+    /**
+     * 把文件写入
+     *
+     * @param myfile
+     */
+    private String writeFile(MultipartFile myfile, HttpServletRequest request) {
+        //获取文件名
+        String fileName = myfile.getOriginalFilename();
+        //获取文件后缀名
+        String fileSuffix = fileName.substring(fileName.lastIndexOf("."));
+        // 文件存放路径
+        String filePath = request.getSession().getServletContext().getRealPath(UPLOAD_DIC);
+        File file = new File(filePath);
+        //如果文件不存在，创建文件夹
+        if (!file.exists()) {
+            file.mkdir();
+        }
+        //写入文件
+        file = new File(filePath, UUID.randomUUID() + fileSuffix);
+        try {
+            myfile.transferTo(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return file.getName();
+
     }
 
 }

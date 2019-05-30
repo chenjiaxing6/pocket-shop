@@ -13,21 +13,26 @@ public class BaseResult implements Serializable {
     public static final  int STATUS_FAIL = 500;
     private int status;
     private String message;
+    private Object data;
 
     public static BaseResult success(){
-        return createBaseResult(STATUS_SUCCESS,"成功");
+        return createBaseResult(STATUS_SUCCESS,"成功",null);
     }
 
     public static  BaseResult fail(){
-        return  createBaseResult(STATUS_FAIL,"错误");
+        return  createBaseResult(STATUS_FAIL,"错误",null);
     }
 
     public static BaseResult success(String message){
-        return createBaseResult(STATUS_SUCCESS,message);
+        return createBaseResult(STATUS_SUCCESS,message,null);
+    }
+
+    public static BaseResult success(String message,Object data){
+        return createBaseResult(STATUS_SUCCESS,message,data);
     }
 
     public static  BaseResult fail(String message){
-        return  createBaseResult(STATUS_FAIL,message);
+        return  createBaseResult(STATUS_FAIL,message,null);
     }
 
     public int getStatus() {
@@ -46,16 +51,25 @@ public class BaseResult implements Serializable {
         this.message = message;
     }
 
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
     /**
      * 用于创建返回结果
      * @param status
      * @param message
      * @return
      */
-    private static BaseResult createBaseResult(int status,String message){
+    private static BaseResult createBaseResult(int status,String message,Object data){
         BaseResult baseResult = new BaseResult() ;
         baseResult.setMessage(message);
         baseResult.setStatus(status);
+        baseResult.setData(data);
         return baseResult;
     }
 }

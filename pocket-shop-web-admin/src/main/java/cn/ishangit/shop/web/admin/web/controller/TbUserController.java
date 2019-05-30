@@ -3,9 +3,9 @@ package cn.ishangit.shop.web.admin.web.controller;
 import cn.ishangit.shop.commons.dto.BaseResult;
 import cn.ishangit.shop.commons.dto.PageInfo;
 import cn.ishangit.shop.domain.TbUser;
+import cn.ishangit.shop.web.admin.abstracts.AbstractBaseController;
 import cn.ishangit.shop.web.admin.service.TbUserService;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,16 +25,13 @@ import java.util.Map;
  */
 @RequestMapping(value = "user")
 @Controller
-public class TbUserController {
-
-    @Autowired
-    private TbUserService userService;
+public class TbUserController extends AbstractBaseController<TbUser,TbUserService> {
 
     @ModelAttribute
     public TbUser getTbUser( Long id){
         TbUser tbUser = new TbUser();
         if (id != null){
-            tbUser = userService.getById(id);
+            tbUser = service.getById(id);
             return tbUser;
         }else
         return tbUser;
@@ -45,6 +42,7 @@ public class TbUserController {
      * @param model
      * @return
      */
+    @Override
     @RequestMapping(value = "list",method = RequestMethod.GET)
     public String list(Model model){
         return "user_list";
@@ -54,6 +52,7 @@ public class TbUserController {
      * 跳转到用户表单页
      * @return
      */
+    @Override
     @RequestMapping(value = "form",method = RequestMethod.GET)
     public  String form(){
         return "user_form";
@@ -64,9 +63,10 @@ public class TbUserController {
      * @param tbUser
      * @return
      */
+    @Override
     @RequestMapping(value = "save",method = RequestMethod.POST)
     public String save(TbUser tbUser, RedirectAttributes redirectAttributes,Model model){
-        BaseResult baseResult = userService.save(tbUser);
+        BaseResult baseResult = service.save(tbUser);
         if (baseResult.getStatus() == BaseResult.STATUS_SUCCESS) {
             redirectAttributes.addFlashAttribute("baseResult", baseResult);
             return "redirect:/user/list";
@@ -83,13 +83,14 @@ public class TbUserController {
      * @param ids
      * @return
      */
+    @Override
     @RequestMapping(value = "delete",method = RequestMethod.POST)
     @ResponseBody
     public BaseResult delete(String ids){
         BaseResult baseResult = null;
         if (!StringUtils.isBlank(ids)) {
             String[] idsArr = ids.split(",");
-            userService.deleteMulti(idsArr);
+            service.deleteMulti(idsArr);
             baseResult = BaseResult.success("删除成功！");
             return baseResult;
         }
@@ -105,6 +106,7 @@ public class TbUserController {
      * @param tbUser
      * @return
      */
+    @Override
     @RequestMapping(value = "page",method = RequestMethod.GET)
     @ResponseBody
     public PageInfo<TbUser> page(HttpServletRequest request,TbUser tbUser){
@@ -117,7 +119,7 @@ public class TbUserController {
         int draw = str_draw  == null?0: Integer.parseInt(str_draw);
         int start = str_start  == null?0: Integer.parseInt(str_start);
         int length = str_length  == null?10: Integer.parseInt(str_length);
-        PageInfo<TbUser> pageInfo = userService.page(length, start,draw,tbUser);
+        PageInfo<TbUser> pageInfo = service.page(length, start,draw,tbUser);
 
         return pageInfo;
     }
@@ -127,6 +129,7 @@ public class TbUserController {
      * @param tbUser
      * @return
      */
+    @Override
     @RequestMapping(value = "detail",method = RequestMethod.GET)
     public String detail(TbUser tbUser){
         return "user_detail";

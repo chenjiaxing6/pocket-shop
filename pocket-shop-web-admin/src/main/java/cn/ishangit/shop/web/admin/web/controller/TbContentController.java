@@ -3,9 +3,9 @@ package cn.ishangit.shop.web.admin.web.controller;
 import cn.ishangit.shop.commons.dto.BaseResult;
 import cn.ishangit.shop.commons.dto.PageInfo;
 import cn.ishangit.shop.domain.TbContent;
+import cn.ishangit.shop.web.admin.abstracts.AbstractBaseController;
 import cn.ishangit.shop.web.admin.service.TbContentService;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,15 +24,13 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping(value = "content")
-public class TbContentController {
-    @Autowired
-    private TbContentService tbContentService;
+public class TbContentController extends AbstractBaseController<TbContent,TbContentService> {
 
     @ModelAttribute
     public TbContent getTbContent(Long id){
         TbContent tbContent = new TbContent();
         if (id != null){
-            tbContent = tbContentService.getById(id);
+            tbContent = service.getById(id);
             return tbContent;
         }else
             return tbContent;
@@ -64,7 +62,7 @@ public class TbContentController {
      */
     @RequestMapping(value = "save",method = RequestMethod.POST)
     public String save(TbContent tbContent, RedirectAttributes redirectAttributes, Model model){
-        BaseResult baseResult = tbContentService.save(tbContent);
+        BaseResult baseResult = service.save(tbContent);
         if (baseResult.getStatus() == BaseResult.STATUS_SUCCESS) {
             redirectAttributes.addFlashAttribute("baseResult", baseResult);
             return "redirect:/content/list";
@@ -87,7 +85,7 @@ public class TbContentController {
         BaseResult baseResult = null;
         if (!StringUtils.isBlank(ids)) {
             String[] idsArr = ids.split(",");
-            tbContentService.deleteMulti(idsArr);
+            service.deleteMulti(idsArr);
             baseResult = BaseResult.success("删除成功！");
             return baseResult;
         }
@@ -115,7 +113,7 @@ public class TbContentController {
         int draw = str_draw  == null?0: Integer.parseInt(str_draw);
         int start = str_start  == null?0: Integer.parseInt(str_start);
         int length = str_length  == null?10: Integer.parseInt(str_length);
-        PageInfo<TbContent> pageInfo = tbContentService.page(length, start,draw,tbContent);
+        PageInfo<TbContent> pageInfo = service.page(length, start,draw,tbContent);
 
         return pageInfo;
     }
