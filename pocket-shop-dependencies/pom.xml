@@ -39,6 +39,7 @@
         <lombok.version>1.18.6</lombok.version>
         <common-fileupload.version>1.3.2</common-fileupload.version>
         <httpclient.version>4.5.5</httpclient.version>
+        <kaptcher.version>2.3</kaptcher.version>
     </properties>
 
     <dependencyManagement>
@@ -197,6 +198,12 @@
                 <version>${httpclient.version}</version>
             </dependency>
             <!-- Apache Http End -->
+            <!--kaptcher-->
+            <dependency>
+                <groupId>com.google.code.kaptcha</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${kaptcher.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

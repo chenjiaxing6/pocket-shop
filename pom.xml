@@ -16,5 +16,6 @@
         <module>pocket-shop-web-admin</module>
         <module>pocket-shop-web-api</module>
         <module>pocket-shop-web-ui</module>
+        <module>pocket-shop-external</module>
     </modules>
 </project>

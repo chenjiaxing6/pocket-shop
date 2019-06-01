@@ -13,13 +13,13 @@
     <title>口袋商城——登录</title>
     <link rel="stylesheet" type="text/css" href="/static/css/index.css">
     <link rel="stylesheet" type="text/css" href="/static/css/ziy.css">
+    <script type="text/javascript" src="/static/js/jquery-1.4.4.min.js"></script>
 </head>
 <body>
 <!--dengl-->
 <div class="beij_center">
     <div class="dengl_logo">
         <img src="/static/images/logo.png">
-        <h1>欢迎登录</h1>
     </div>
 </div>
 
@@ -56,6 +56,10 @@
                 <div class="txt_kuang">
                     <input type="text" class="itxt" name="email" placeholder="邮箱">
                     <input type="password" class="itxt" name="password" placeholder="密码">
+                    <div>
+                        <input type="text" class="itxt" name="verification" placeholder="验证码" style="width: 109px;height: 45px">
+                        <img src="/verification"  id="verification" style="float: right;padding-right: 31px;cursor: pointer;" title="看不清？换一张">
+                    </div>
                 </div>
                 <div class="remember">
                     <div class="fl">
@@ -83,5 +87,13 @@
         <p class="gonga_bei">京公网安备：123456789号</p>
     </div>
 </div>
+<script>
+    $(function () {
+        // 刷新验证码
+        $("#verification").bind("click", function () {
+            $(this).hide().attr('src', '/verification?random=' + Math.random()).fadeIn();
+        });
+    });
+</script>
 </body>
 </html>

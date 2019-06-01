@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="pocket-shop-commons" />
         <module name="pocket-shop-domain" />
+        <module name="pocket-shop-external" />
         <module name="pocket-shop-web-admin" />
         <module name="pocket-shop-web-api" />
         <module name="pocket-shop-web-ui" />
@@ -18,6 +19,7 @@
       <module name="pocket-shop-commons" target="1.8" />
       <module name="pocket-shop-dependencies" target="1.8" />
       <module name="pocket-shop-domain" target="1.8" />
+      <module name="pocket-shop-external" target="1.8" />
       <module name="pocket-shop-web-admin" target="1.8" />
       <module name="pocket-shop-web-api" target="1.8" />
       <module name="pocket-shop-web-ui" target="1.8" />

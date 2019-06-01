@@ -5,6 +5,8 @@ import cn.ishangit.shop.web.ui.api.UserApi;
 import cn.ishangit.shop.web.ui.constant.SystemConstant;
 import cn.ishangit.shop.web.ui.dto.User;
 import cn.ishangit.shop.web.ui.dto.UserDto;
+import com.google.code.kaptcha.Constants;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,6 +37,11 @@ public class UserController {
      */
     @RequestMapping(value = "login",method = RequestMethod.POST)
     public String login(User user, Model model, HttpServletRequest request) throws Exception {
+        //检查验证码
+        if (!checkVerification(user,request)){
+            model.addAttribute("BaseResult",BaseResult.fail("验证码输入错误"));
+            return login();
+        }
         UserDto userDto = UserApi.login(user);
         BaseResult baseResult = null;
         if (userDto == null){
@@ -49,6 +56,16 @@ public class UserController {
             model.addAttribute("BaseResult",baseResult);
         }
         return "redirect:/index";
+    }
+    /**
+     * 判断验证码
+     */
+    public boolean checkVerification(User user , HttpServletRequest request){
+        String verification = (String) request.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY);
+        if (StringUtils.equals(user.getVerification(),verification)) {
+            return true;
+        }
+        return false;
     }
 
     /**
