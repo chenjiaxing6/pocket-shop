@@ -25,7 +25,11 @@ public class TbContentController {
     @Autowired
     private TbContentService tbContentService;
 
-
+    /**
+     * 根据分类ID获取内容
+     * @param categoryId
+     * @return
+     */
     @RequestMapping(value = "{categoryId}",method = RequestMethod.GET)
     public BaseResult getTbContentCategoryById(@PathVariable(value = "categoryId") Long categoryId){
         List<TbContent> tbContents = tbContentService.findContentByCategoryId(categoryId);
@@ -40,4 +44,6 @@ public class TbContentController {
         }
         return BaseResult.success("成功",tbContentDTOS);
     }
+
+
 }

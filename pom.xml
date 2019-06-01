@@ -10,11 +10,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>pocket-shop-dependencies</module>
         <module>pocket-shop-commons</module>
+        <module>pocket-shop-dependencies</module>
         <module>pocket-shop-domain</module>
         <module>pocket-shop-web-admin</module>
-        <module>pocket-shop-web-ui</module>
         <module>pocket-shop-web-api</module>
+        <module>pocket-shop-web-ui</module>
     </modules>
 </project>

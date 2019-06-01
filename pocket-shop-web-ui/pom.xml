@@ -16,4 +16,55 @@
     <name>pocket-shop-web-ui</name>
     <description></description>
 
+    <dependencies>
+        <!--project begin-->
+        <dependency>
+            <groupId>cn.ishangit</groupId>
+            <artifactId>pocket-shop-domain</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.ishangit</groupId>
+            <artifactId>pocket-shop-commons</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!--project end-->
+
+        <!--Spring Begin-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <!--Spring End-->
+
+        <!--junit begin-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--junit end-->
+
+        <!-- Servlet Begin -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <!-- Servlet End -->
+        <!--文件上传-->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>

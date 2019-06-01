@@ -1,8 +1,9 @@
-package cn.ishangit.shop.web.api.service;
+package cn.ishangit.shop.web.api.service.impl;
 
 import cn.ishangit.shop.domain.TbContent;
 import cn.ishangit.shop.domain.TbContentCategory;
 import cn.ishangit.shop.web.api.dao.TbContentDao;
+import cn.ishangit.shop.web.api.service.TbContentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ import java.util.List;
  * @create: 2019-05-30 08:56
  **/
 @Service
-public class TbContentServiceImpl implements TbContentService{
+public class TbContentServiceImpl implements TbContentService {
 
     @Autowired
     private TbContentDao tbContentDao;

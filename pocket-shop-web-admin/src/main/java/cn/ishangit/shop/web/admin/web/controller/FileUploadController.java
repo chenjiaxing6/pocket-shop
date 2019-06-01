@@ -34,11 +34,12 @@ public class FileUploadController {
     public Map<String, Object> upload(MultipartFile dropzFile, MultipartFile[] editorFiles, HttpServletRequest request) {
         Map<String, Object> res = new HashMap<String, Object>();
         MultipartFile myfile = null;
+        String serverPath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
         //如果dropFile不为空  则为dropzone上传的文件
         if (dropzFile != null) {
             myfile = dropzFile;
             String fileName = writeFile(myfile, request);
-            res.put("fileName", UPLOAD_DIC + fileName);
+            res.put("fileName",serverPath +  UPLOAD_DIC +"/"+ fileName);
             return res;
         }
 
@@ -49,7 +50,6 @@ public class FileUploadController {
              * getServerName:：服务器名称
              * getServerPort:服务器端口
              */
-            String serverPath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
             String[] stringData = new String[100];
             int i = 0;
             for (MultipartFile editorFile : editorFiles) {

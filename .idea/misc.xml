@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/pocket-shop-web-admin" />
-    <file type="web" url="file://$PROJECT_DIR$/pocket-shop-web-api" />
-    <file type="web" url="file://$PROJECT_DIR$/pocket-shop-web-ui" />
+    <file type="web" url="file://$PROJECT_DIR$" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -12,6 +10,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-dependencies/pom.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/pom.xml" />
       </list>
     </option>
   </component>
