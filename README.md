@@ -41,8 +41,8 @@
 
 首页：
 
-![1559394763075](C:\Users\chenjiaxing\AppData\Roaming\Typora\typora-user-images\1559394763075.png)
+![imagedd572276a7b0211e.png](http://img.ishangit.cn/images/2019/06/01/imagedd572276a7b0211e.png)
 
 后台：
 
-![1559394775501](C:\Users\chenjiaxing\AppData\Roaming\Typora\typora-user-images\1559394775501.png)
+![imagee6e999e05f898958.png](http://img.ishangit.cn/images/2019/06/01/imagee6e999e05f898958.png)
