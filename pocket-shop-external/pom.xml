@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>pocket-shop-external</artifactId>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <name>pocket-shop-external</name>
     <description></description>

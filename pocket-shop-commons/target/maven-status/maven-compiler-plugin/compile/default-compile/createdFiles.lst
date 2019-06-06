@@ -1,0 +1,15 @@
+cn\ishangit\shop\commons\dto\BaseResult.class
+cn\ishangit\shop\commons\persistence\TreeDao.class
+cn\ishangit\shop\commons\validator\BeanValidator.class
+cn\ishangit\shop\commons\persistence\BaseService.class
+cn\ishangit\shop\commons\dto\PageInfo.class
+cn\ishangit\shop\commons\constant\MapperUtils.class
+cn\ishangit\shop\commons\constant\CookieUtils.class
+cn\ishangit\shop\commons\constant\MapperUtils$1.class
+cn\ishangit\shop\commons\constant\ConstantUtils.class
+cn\ishangit\shop\commons\constant\HttpClientUtils.class
+cn\ishangit\shop\commons\persistence\TreeService.class
+cn\ishangit\shop\commons\persistence\BaseDao.class
+cn\ishangit\shop\commons\constant\SendEmailUtils.class
+cn\ishangit\shop\commons\constant\RegexUtils.class
+cn\ishangit\shop\commons\persistence\BaseEntity.class
