@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8eb32b0-aba4-49d0-826d-e329eec87e75" name="Default Changelist" comment="" />
+    <list default="true" id="d8eb32b0-aba4-49d0-826d-e329eec87e75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/pocket-shop-dependencies/target/" />
     <ignored path="$PROJECT_DIR$/pocket-shop-my-shop-commons/target/" />
@@ -52,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+            <state relative-caret-position="308">
+              <caret line="50" column="35" lean-forward="true" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -204,11 +206,6 @@
             <path>
               <item name="pocket-shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="pocket-shop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pocket-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pocket-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="pocket-shop-external" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -670,7 +667,7 @@
       <workItem from="1560519774452" duration="6000" />
       <workItem from="1560520264270" duration="348000" />
       <workItem from="1560577647766" duration="649000" />
-      <workItem from="1562131132455" duration="592000" />
+      <workItem from="1562131132455" duration="1210000" />
     </task>
     <task id="LOCAL-00001" summary="完成了项目的基本架构">
       <created>1557907087278</created>
@@ -875,7 +872,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562131480868</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="添加数据库等">
+      <created>1562131962748</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1562131962748</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -899,7 +903,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230286000" />
+    <option name="totallyTimeSpent" value="230904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -912,9 +916,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1431" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49333334" visible="true" weight="0.25782958" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49333334" visible="true" weight="0.25782958" />
       <window_info id="Structure" order="1" sideWeight="0.5054432" side_tool="true" weight="0.34887108" />
       <window_info id="JRebel" order="2" sideWeight="0.50666666" side_tool="true" weight="0.3532411" />
       <window_info id="Image Layers" order="3" />
@@ -1398,13 +1401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/web/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pocket-shop-external/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -1412,10 +1408,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/web/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        <state relative-caret-position="308">
+          <caret line="50" column="35" lean-forward="true" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
         </state>
       </provider>
     </entry>
