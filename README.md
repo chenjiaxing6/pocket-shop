@@ -1,6 +1,6 @@
 ## 介绍
 
-个人的练习的实现的一个本地商城，使用Maven分模块开发，主要分为：
+使用Maven分模块开发，主要模块：
 
 - pocket-shop-commons  工具
 - pocket-shop-dependencies 依赖
