@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="pocket-shop-web-admin:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d8eb32b0-aba4-49d0-826d-e329eec87e75" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/pocket-shop-dependencies/target/" />
+    <ignored path="$PROJECT_DIR$/pocket-shop-my-shop-commons/target/" />
+    <ignored path="$PROJECT_DIR$/pocket-shop-commons/target/" />
+    <ignored path="$PROJECT_DIR$/pocket-shop-domain/target/" />
+    <ignored path="$PROJECT_DIR$/pocket-shop-web-admin/target/" />
+    <ignored path="$PROJECT_DIR$/pocket-shop-web-ui/target/" />
+    <ignored path="$PROJECT_DIR$/pocket-shop-api/target/" />
+    <ignored path="$PROJECT_DIR$/pocket-shop-web-api/target/" />
+    <ignored path="$PROJECT_DIR$/pocket-shop-external/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="pocket-shop" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/web/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="31" column="38" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/resources/shop.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="69" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="20" lean-forward="true" selection-end-line="52" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pocket-shop-commons/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>login</find>
+      <find>handlerInitDataTables</find>
+      <find>search</find>
+      <find>user</find>
+      <find>mo</find>
+      <find>dropzF</find>
+      <find>upda</find>
+      <find>jack</find>
+      <find>MyShop</find>
+      <find>./images</find>
+      <find>轮播</find>
+      <find>登录</find>
+      <find>messa</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>口袋商城</replace>
+      <replace>&quot;/static/images</replace>
+      <replace>/static/images</replace>
+      <replace>/static/images/</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pocket-shop-web-admin/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/java/cn/ishangit/shop/web/api/dao/TbContentCategoryDao.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/java/cn/ishangit/shop/web/api/service/TbContentService.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/java/cn/ishangit/shop/web/api/service/TbContentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/resources/spring-context-mybatis.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/resources/mapper/TbContentMapper.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/java/cn/ishangit/shop/web/api/web/dto/TbContentDTO.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/java/cn/ishangit/shop/web/api/web/controller/TbContentController.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-commons/src/main/java/cn/ishangit/shop/commons/dto/BaseResult.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-admin/src/main/resources/shop.properties" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/resources/shop.properties" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/pom.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-commons/src/main/java/cn/ishangit/shop/commons/constant/HttpClientUtils.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/dto/Content.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/constant/API.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/web/controller/FileUploadController.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/resources/mapper/TbUserMapper.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/java/cn/ishangit/shop/web/api/dao/TbUserDao.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/java/cn/ishangit/shop/web/api/service/TbUserService.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/java/cn/ishangit/shop/web/api/service/impl/TbUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/java/cn/ishangit/shop/web/api/web/controller/v1/TbContentController.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/dto/TbUser.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/api/ContentsApi.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/api/API.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-api/src/main/java/cn/ishangit/shop/web/api/web/controller/v1/TbUserController.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/dto/UserDto.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-commons/src/main/java/cn/ishangit/shop/commons/constant/MapperUtils.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/api/UserApi.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/constant/SystemConstant.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/interceptor/LoginIntercepter.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/webapp/WEB-INF/views/index.jsp" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/controller/KaptchaController.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/spring-context.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/spring-kaptcha.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/spring-context-kaptcha.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/webapp/WEB-INF/views/login.jsp" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/dto/User.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-dependencies/pom.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/shop.properties" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/spring-context-email.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/pocket-shop-commons/src/main/java/cn/ishangit/shop/commons/constant/SendEmailUtils.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pocket-shop-web-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-external/pom.xml" />
+        <option value="$PROJECT_DIR$/pocket-shop-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="true" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="localRepository" value="G:\maven_repository" />
+        <option name="userSettingsFile" value="G:\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="pocket-shop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="pocket-shop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-32" />
+    <option name="y" value="-32" />
+    <option name="width" value="1950" />
+    <option name="height" value="1068" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pocket-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pocket-shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pocket-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pocket-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="pocket-shop-web-admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pocket-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pocket-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="pocket-shop-web-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pocket-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pocket-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="pocket-shop-web-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pocket-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pocket-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="pocket-shop-web-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pocket-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pocket-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="pocket-shop-web-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559376994688" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\JAVACode\pocket-shop\pocket-shop-web-admin\src\main\webapp\WEB-INF\tag\sys" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JAVACode\pocket-shop\pocket-shop-external\lib" />
+      <recent name="F:\JAVACode\pocket-shop\pocket-shop-web-api\src\main\resources\mapper" />
+      <recent name="F:\JAVACode\pocket-shop\pocket-shop-web-ui\src\main\webapp\static\images" />
+      <recent name="F:\JAVACode\pocket-shop\pocket-shop-web-ui\src\main\webapp\static" />
+      <recent name="F:\JAVACode\pocket-shop\pocket-shop-web-ui\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.pocket-shop-web-admin">
+    <configuration name="pocket-shop-web-admin" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.14" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="pocket-shop-web-admin:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_pocket-shop_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58559" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="58560" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Executor">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="pocket-shop-web-admin:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="pocket-shop-web-api" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.14" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="pocket-shop-web-api:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_pocket-shop_3" />
+        <option name="HTTP_PORT" value="8081" />
+        <option name="JNDI_PORT" value="1100" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56959" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="56960" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Executor">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="pocket-shop-web-api:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="pocket-shop-web-ui" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.14" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8082/" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="pocket-shop-web-ui:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_pocket-shop_4" />
+        <option name="HTTP_PORT" value="8082" />
+        <option name="JNDI_PORT" value="1101" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50391" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="50392" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Executor">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="pocket-shop-web-ui:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.pocket-shop-web-admin" />
+      <item itemvalue="Tomcat Server.pocket-shop-web-api" />
+      <item itemvalue="Tomcat Server.pocket-shop-web-ui" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8eb32b0-aba4-49d0-826d-e329eec87e75" name="Default Changelist" comment="" />
+      <created>1557903079487</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557903079487</updated>
+      <workItem from="1557903080758" duration="33000" />
+      <workItem from="1557903116593" duration="1119000" />
+      <workItem from="1557904240661" duration="11586000" />
+      <workItem from="1557916412921" duration="4547000" />
+      <workItem from="1557921430362" duration="932000" />
+      <workItem from="1557922409405" duration="1715000" />
+      <workItem from="1557924248594" duration="198000" />
+      <workItem from="1557976240781" duration="9911000" />
+      <workItem from="1558007682671" duration="6844000" />
+      <workItem from="1558081518520" duration="2134000" />
+      <workItem from="1558083664622" duration="14983000" />
+      <workItem from="1558142784440" duration="11273000" />
+      <workItem from="1558179785825" duration="7714000" />
+      <workItem from="1558256338347" duration="5318000" />
+      <workItem from="1558266877034" duration="708000" />
+      <workItem from="1558327089375" duration="5563000" />
+      <workItem from="1558333464164" duration="1278000" />
+      <workItem from="1558341077848" duration="13000" />
+      <workItem from="1558346860553" duration="37000" />
+      <workItem from="1558354899459" duration="6756000" />
+      <workItem from="1558412115890" duration="3557000" />
+      <workItem from="1558418470242" duration="1423000" />
+      <workItem from="1558420829014" duration="1602000" />
+      <workItem from="1558444773893" duration="496000" />
+      <workItem from="1558507672415" duration="2932000" />
+      <workItem from="1558513365317" duration="1856000" />
+      <workItem from="1558525992970" duration="2460000" />
+      <workItem from="1558582126879" duration="5358000" />
+      <workItem from="1558602966089" duration="4653000" />
+      <workItem from="1558609208261" duration="27000" />
+      <workItem from="1558658041851" duration="1803000" />
+      <workItem from="1558676356232" duration="11014000" />
+      <workItem from="1558691223614" duration="6353000" />
+      <workItem from="1558705379289" duration="104000" />
+      <workItem from="1558744903330" duration="12312000" />
+      <workItem from="1558777706120" duration="620000" />
+      <workItem from="1558878165635" duration="5414000" />
+      <workItem from="1558915359248" duration="4060000" />
+      <workItem from="1558934227392" duration="4800000" />
+      <workItem from="1558950301396" duration="220000" />
+      <workItem from="1558961338285" duration="4961000" />
+      <workItem from="1559089557115" duration="41000" />
+      <workItem from="1559094922317" duration="2966000" />
+      <workItem from="1559129419363" duration="2539000" />
+      <workItem from="1559176809155" duration="6405000" />
+      <workItem from="1559200806644" duration="881000" />
+      <workItem from="1559201699809" duration="1744000" />
+      <workItem from="1559224618750" duration="1811000" />
+      <workItem from="1559265993737" duration="27000" />
+      <workItem from="1559266066770" duration="165000" />
+      <workItem from="1559266238041" duration="3000" />
+      <workItem from="1559266247185" duration="77000" />
+      <workItem from="1559286707888" duration="15633000" />
+      <workItem from="1559310794739" duration="2508000" />
+      <workItem from="1559354446473" duration="17951000" />
+      <workItem from="1559393071424" duration="1583000" />
+      <workItem from="1559394879017" duration="569000" />
+      <workItem from="1559572738958" duration="244000" />
+      <workItem from="1559573790365" duration="415000" />
+      <workItem from="1559605331988" duration="458000" />
+      <workItem from="1559630703713" duration="17000" />
+      <workItem from="1559734193978" duration="2087000" />
+      <workItem from="1559736290655" duration="139000" />
+      <workItem from="1559736435806" duration="1132000" />
+      <workItem from="1559737573091" duration="69000" />
+      <workItem from="1559787713215" duration="512000" />
+      <workItem from="1560517666866" duration="14000" />
+      <workItem from="1560519751159" duration="12000" />
+      <workItem from="1560519766823" duration="2000" />
+      <workItem from="1560519774452" duration="6000" />
+      <workItem from="1560520264270" duration="348000" />
+      <workItem from="1560577647766" duration="649000" />
+    </task>
+    <task id="LOCAL-00001" summary="完成了项目的基本架构">
+      <created>1557907087278</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557907087278</updated>
+    </task>
+    <task id="LOCAL-00002" summary="整合Spring springMVC，登录以及记住我的功能">
+      <created>1557921991889</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557921991889</updated>
+    </task>
+    <task id="LOCAL-00003" summary="整合Spring springMVC，登录以及记住我的功能">
+      <created>1557922746270</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1557922746270</updated>
+    </task>
+    <task id="LOCAL-00004" summary="整合Spring springMVC，登录以及记住我的功能">
+      <created>1557923409247</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557923409247</updated>
+    </task>
+    <task id="LOCAL-00005" summary="整合Spring springMVC，登录以及记住我的功能">
+      <created>1557923601186</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1557923601186</updated>
+    </task>
+    <task id="LOCAL-00006" summary="整合Druid">
+      <created>1557977036383</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1557977036383</updated>
+    </task>
+    <task id="LOCAL-00007" summary="整合Mybatis 完成测试">
+      <created>1557981345135</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557981345135</updated>
+    </task>
+    <task id="LOCAL-00008" summary="完成真正的登陆功能">
+      <created>1557983603649</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1557983603649</updated>
+    </task>
+    <task id="LOCAL-00009" summary="完成用户列表的显示">
+      <created>1558011603720</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1558011603720</updated>
+    </task>
+    <task id="LOCAL-00010" summary="完成用户添加使用 jquery validation进行表单验证、&#10;列表页的全选反选">
+      <created>1558100329447</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1558100329448</updated>
+    </task>
+    <task id="LOCAL-00011" summary="完成用户批量删除功能">
+      <created>1558154028333</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1558154028333</updated>
+    </task>
+    <task id="LOCAL-00012" summary="完成分页显示功能">
+      <created>1558189829043</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1558189829043</updated>
+    </task>
+    <task id="LOCAL-00013" summary="更新用户、查看用户">
+      <created>1558266977642</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1558266977652</updated>
+    </task>
+    <task id="LOCAL-00014" summary="更新用户、查看用户">
+      <created>1558267481170</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1558267481170</updated>
+    </task>
+    <task id="LOCAL-00015" summary="用户模块完成">
+      <created>1558331805035</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1558331805035</updated>
+    </task>
+    <task id="LOCAL-00016" summary="完成分类树形菜单列表">
+      <created>1558362374662</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1558362374663</updated>
+    </task>
+    <task id="LOCAL-00017" summary="内容管理模块完成一部分">
+      <created>1558444838180</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1558444838180</updated>
+    </task>
+    <task id="LOCAL-00018" summary="使用zTree完成添加内容页面的分类选择">
+      <created>1558608539015</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1558608539015</updated>
+    </task>
+    <task id="LOCAL-00019" summary="使用spring validation进行服务端验证&#10;使用dropzone完成添加内容的图片上传">
+      <created>1558700209777</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1558700209777</updated>
+    </task>
+    <task id="LOCAL-00020" summary="添加分类，更新分类功能">
+      <created>1558961404751</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1558961404751</updated>
+    </task>
+    <task id="LOCAL-00021" summary="对service层进行了封装">
+      <created>1558964625879</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1558964625879</updated>
+    </task>
+    <task id="LOCAL-00022" summary="增加API接口模块">
+      <created>1559201512489</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1559201512489</updated>
+    </task>
+    <task id="LOCAL-00023" summary="完成首页幻灯的对接  用户登录等">
+      <created>1559363721939</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1559363721940</updated>
+    </task>
+    <task id="LOCAL-00024" summary="使用kaptcha添加登陆验证码">
+      <created>1559371135712</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1559371135712</updated>
+    </task>
+    <task id="LOCAL-00025" summary="增加登陆邮件发送">
+      <created>1559376911609</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1559376911609</updated>
+    </task>
+    <task id="LOCAL-00026" summary="更新介绍">
+      <created>1559394999874</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1559394999874</updated>
+    </task>
+    <task id="LOCAL-00027" summary="更新介绍">
+      <created>1559395196381</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1559395196381</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TbUserServiceTest_testSlectAll - 2019.05.16 at 12h 29m 11s.xml">
+      <configuration name="TbUserServiceTest.testSlectAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TbUserServiceTest_testSlectAll - 2019.05.16 at 12h 30m 36s.xml">
+      <configuration name="TbUserServiceTest.testSlectAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TbUserServiceTest_testSlectAll - 2019.05.16 at 12h 32m 06s.xml">
+      <configuration name="TbUserServiceTest.testSlectAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TbUserServiceTest_testSlectAll - 2019.05.16 at 12h 34m 34s.xml">
+      <configuration name="TbUserServiceTest.testSlectAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TbUserServiceTest_testMd5 - 2019.05.16 at 12h 54m 28s.xml">
+      <configuration name="TbUserServiceTest.testMd5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TbUserServiceTest_testMd5 - 2019.05.19 at 17h 06m 13s.xml">
+      <configuration name="TbUserServiceTest.testMd5" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="229694000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1431" height="772" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49333334" visible="true" weight="0.2541879" />
+      <window_info id="Structure" order="1" sideWeight="0.5054432" side_tool="true" weight="0.34887108" />
+      <window_info id="JRebel" order="2" sideWeight="0.50666666" side_tool="true" weight="0.3532411" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50220263" side_tool="true" weight="0.37363437" />
+      <window_info id="Designer" order="7" />
+      <window_info id="Web" order="8" sideWeight="0.50220263" side_tool="true" weight="0.28696287" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32970452" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2690513" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49817917" weight="0.33437014" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32970452" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010925" side_tool="true" weight="0.29393467" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32970452" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Problems" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32970452" />
+      <window_info anchor="bottom" id="JRebel Console" order="13" sideWeight="0.5018208" side_tool="true" weight="0.30015552" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.32970452" />
+      <window_info anchor="bottom" id="Spring" order="15" />
+      <window_info anchor="bottom" id="Java Enterprise" order="16" />
+      <window_info anchor="bottom" id="JRebel Executor" order="17" weight="0.32970452" />
+      <window_info anchor="bottom" id="Messages" order="18" weight="0.32970452" />
+      <window_info anchor="bottom" id="Database Console" order="19" weight="0.32970452" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.24836126" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.16897306" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成了项目的基本架构" />
+    <MESSAGE value="整合Spring springMVC，登录以及记住我的功能" />
+    <MESSAGE value="整合Druid" />
+    <MESSAGE value="整合Mybatis 完成测试" />
+    <MESSAGE value="完成真正的登陆功能" />
+    <MESSAGE value="完成用户列表的显示" />
+    <MESSAGE value="完成用户添加使用 jquery validation进行表单验证、&#10;列表页的全选反选" />
+    <MESSAGE value="完成用户批量删除功能" />
+    <MESSAGE value="完成分页显示功能" />
+    <MESSAGE value="更新用户、查看用户" />
+    <MESSAGE value="用户模块完成" />
+    <MESSAGE value="完成分类树形菜单列表" />
+    <MESSAGE value="内容管理模块完成一部分" />
+    <MESSAGE value="使用zTree完成添加内容页面的分类选择" />
+    <MESSAGE value="使用spring validation进行服务端验证&#10;使用dropzone完成添加内容的图片上传" />
+    <MESSAGE value="添加分类，更新分类功能" />
+    <MESSAGE value="对service层进行了封装" />
+    <MESSAGE value="增加API接口模块" />
+    <MESSAGE value="完成首页幻灯的对接  用户登录等" />
+    <MESSAGE value="使用kaptcha添加登陆验证码" />
+    <MESSAGE value="增加登陆邮件发送" />
+    <MESSAGE value="更新介绍" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新介绍" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://G:/maven_repository/com/fasterxml/jackson/core/jackson-databind/2.5.4/jackson-databind-2.5.4.jar!/com/fasterxml/jackson/databind/node/ObjectNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="441" selection-start-line="441" selection-end-line="441" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-commons/src/main/java/cn/ishangit/shop/commons/constant/HttpClientUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1533#1534#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-commons/src/main/java/cn/ishangit/shop/commons/constant/MapperUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="73" column="48" lean-forward="true" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/dto/UserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/constant/SystemConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="38" column="71" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/maven_repository/org/springframework/spring-webmvc/4.3.17.RELEASE/spring-webmvc-4.3.17.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/interceptor/LoginIntercepter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/webapp/WEB-INF/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="82" column="24" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/api/UserApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/api/API.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="15" column="55" lean-forward="true" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://G:/maven_repository/com/google/code/kaptcha/kaptcha/2.3/kaptcha-2.3.jar!/com/google/code/kaptcha/impl/DefaultKaptcha.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/maven_repository/com/google/code/kaptcha/kaptcha/2.3/kaptcha-2.3.jar!/com/google/code/kaptcha/util/Config.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="67" lean-forward="true" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/maven_repository/com/google/code/kaptcha/kaptcha/2.3/kaptcha-2.3.jar!/com/google/code/kaptcha/Constants.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/dto/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/web/controller/TbUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="121" column="72" lean-forward="true" selection-start-line="121" selection-start-column="72" selection-end-line="121" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="60" column="47" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/controller/KaptchaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/spring-context-kaptcha.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="53" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/maven_repository/org/apache/commons/commons-email/1.5/commons-email-1.5.jar!/org/apache/commons/mail/SimpleEmail.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/shop.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/maven_repository/org/springframework/spring-webmvc/4.3.17.RELEASE/spring-webmvc-4.3.17.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/maven_repository/org/springframework/spring-webmvc/4.3.17.RELEASE/spring-webmvc-4.3.17.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="530" selection-start-line="530" selection-end-line="530" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/maven_repository/org/springframework/spring-web/4.3.17.RELEASE/spring-web-4.3.17.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/maven_repository/org/springframework/spring-webmvc/4.3.17.RELEASE/spring-webmvc-4.3.17.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="401" selection-start-line="401" selection-end-line="401" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/resources/spring-context-email.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="92" selection-start-line="4" selection-start-column="92" selection-end-line="4" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/maven_repository/org/apache/commons/commons-email/1.5/commons-email-1.5.jar!/org/apache/commons/mail/Email.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="537" column="30" selection-start-line="537" selection-start-column="25" selection-end-line="537" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="288">
+            <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-commons/src/main/java/cn/ishangit/shop/commons/constant/SendEmailUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-ui/src/main/java/cn/ishangit/shop/web/ui/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/abstracts/AbstractBaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/service/TbUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/abstracts/AbstractBaseTreeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/dao/TbContentCategoryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/service/TbContentCategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/web/controller/TbContentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-dependencies/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-external/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/java/cn/ishangit/shop/web/admin/web/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-commons/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/resources/shop.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="69" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-shop-web-admin/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="20" lean-forward="true" selection-end-line="52" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>pocket-shop-web-admin:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>pocket-shop-web-admin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: javax.validation:validation-api:2.0.1.Final</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
